@@ -1,0 +1,41 @@
+1. Using DevExpress XPO (code first), create XPO classes and tables in the database (MS SQL Server): Order, OrderDetail, Item.
+   Relationship an Order to OrderDetail is one to many
+
+   Fields of the Item table:
+   ItemName - Product Name
+
+   Fields of the Order table:
+   OrderDate - datetime (date the order was created)
+   OrderNum - string (order number, for example Z-12345, 123, etc.)
+   OrderStatus - int (1 - new, 2 - in processing, 3 - paid, 4 - completed)
+
+   OrderDetail table fields (Order details):
+   Order - link to Order
+   Item - link to Item
+   OrderDetailQuantity - int (quantity)
+   OrderDetailPrice - float (price)
+
+   Using the components of DevExpress, create a form (XtraForm) with two grids (DevExpress.XtraGrid.GridControl). Also use Layout Controls within form. 
+   Upper grid - the register of orders (Order), bottom - order details 
+   (OrderDetail). For the data source for grids use XPCollection. When navigating the rows of the upper grid, display in the lower grid details that belong only to the current order
+   (the line on which we stand in the upper grid). Grids must ensure the creation, editing and deletion of orders and details.
+
+   Implement a validator for the OrderDetailQuantity field of the OrderDetail table: Allow to enter a quantity > 0. You can choose the method for implementing the validator
+   at your discretion.
+
+
+2. Create another XPO class - ItemInStock (Goods in stock). Fill with test data at your discretion. 
+   ItemInStock table fields:
+   Item - link to Item
+   QuantityOnStock - int (quantity on stock)
+
+   Implement a validator for the OrderDetailQuantity field of the OrderDetail table: Allow adding rows to the order with the quantity not exceeding the quantity on stock
+   (OrderDetail.OrderDetailQuantity <= ItemInStock.QuantityOnStock). Relationship - by Item.
+
+Pay your attention: For test task you should use DevExpress components and DevExpress XPO. 
+
+ 
+
+
+
+
