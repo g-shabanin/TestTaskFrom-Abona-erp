@@ -6,11 +6,13 @@
     <RootNamespace>WpfAppXPO</RootNamespace>
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
+    <OutputPath>..\..\..\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.WindowsDesktop.Wpf" Version="20.1.4" />
-    <PackageReference Include="DevExpress.WindowsDesktop.Wpf.Themes.All" Version="20.1.4" />
-    <PackageReference Include="DevExpress.Xpo" Version="20.1.4" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf" Version="20.2.4" />
+    <PackageReference Include="DevExpress.WindowsDesktop.Wpf.Themes.All" Version="20.2.4" />
+    <PackageReference Include="DevExpress.Xpo" Version="20.2.4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Classic\App.xaml.cs" />

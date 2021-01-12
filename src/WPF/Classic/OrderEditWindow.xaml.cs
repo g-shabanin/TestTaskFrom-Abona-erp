@@ -1,6 +1,6 @@
 ﻿using System;
 using DevExpress.Xpf.Core;
-using WpfApplication.Wrappers;
+using WpfAppXPO.Wrappers;
 using InventoryXpo;
 
 namespace WpfAppXPO {
