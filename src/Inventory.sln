@@ -7,9 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.Data", "Inventory
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inventory.ViewModels", "Inventory.ViewModels\Inventory.ViewModels.csproj", "{9CEE6144-0377-4F95-AC2D-FDC599B82ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.App.UWP", "Inventory.App\Inventory.App.UWP.csproj", "{88F4FCC9-4783-491E-BEF7-CA1C07DD18A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory.App", "Inventory.App\Inventory.App.csproj", "{88F4FCC9-4783-491E-BEF7-CA1C07DD18A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{5AC38810-8837-4093-8578-7D91C8AB922E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{FD6B656A-9AE7-48AF-9497-50CE597A6C1D}"
+	ProjectSection(SolutionItems) = preProject
+		..\Doc\TestTaskDevExpressMedium.txt = ..\Doc\TestTaskDevExpressMedium.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
