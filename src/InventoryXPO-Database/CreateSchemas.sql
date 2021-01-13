@@ -1,0 +1,3 @@
+USE InventoryXPO;  
+GO  
+CREATE SCHEMA INVENTORY -- optional param AUTHORIZATION dbo 

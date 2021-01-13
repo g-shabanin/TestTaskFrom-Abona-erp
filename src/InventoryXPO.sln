@@ -11,12 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Classic.Core", "Classic.Cor
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{430F6560-06FA-4222-92E6-66C68327D4B0}"
 	ProjectSection(SolutionItems) = preProject
+		..\Doc\TaskCompletionInformation.txt = ..\Doc\TaskCompletionInformation.txt
 		..\Doc\TestTaskDevExpressMedium.txt = ..\Doc\TestTaskDevExpressMedium.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppXPO", "WPF\Classic\WpfAppXPO.csproj", "{7440A834-FE7C-4360-BCE1-6AA2E5246D2B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppXPO", "WPF\Classic.Core\WpfAppXPO.csproj", "{C2CB8AF4-0CF5-4DC3-A901-62B4A243F1BE}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "InventoryXPO-Database", "InventoryXPO-Database\InventoryXPO-Database.sqlproj", "{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +35,12 @@ Global
 		{C2CB8AF4-0CF5-4DC3-A901-62B4A243F1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2CB8AF4-0CF5-4DC3-A901-62B4A243F1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2CB8AF4-0CF5-4DC3-A901-62B4A243F1BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

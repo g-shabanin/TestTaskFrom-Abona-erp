@@ -1,0 +1,11 @@
+Task completion information
+
+
+
+1. Using:
+	a. MS Visual Studio 2019
+	b. MS SQL Server 2019
+	c. DevExpress 20.4
+	d. DevExpress XPO 20.4
+
+2. 
