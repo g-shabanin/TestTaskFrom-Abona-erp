@@ -87,8 +87,10 @@
     </Build>
     <PreDeploy Include="01 DB structure\CreateSchemas.sql" />
     <Build Include="Inventory\Tables\Inventory.Order.sql" />
-    <Build Include="Inventory\Tables\Inventory.OrderStatusType.sql" />
     <Build Include="Inventory\Tables\Inventory.ProductItem.sql" />
+    <Build Include="Inventory\Tables\Inventory.OrderItems.sql" />
+    <Build Include="Inventory\Tables\Inventory.OrderStatusType.sql" />
+    <Build Include="01 DB structure\Inventory.Function1.sql" />
   </ItemGroup>
   <ItemGroup>
     <SqlCmdVariable Include="DefaultSchema">
@@ -102,5 +104,8 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="InventoryXPO-Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="01 DB structure\DatabaseSeed.sql" />
   </ItemGroup>
 </Project>
