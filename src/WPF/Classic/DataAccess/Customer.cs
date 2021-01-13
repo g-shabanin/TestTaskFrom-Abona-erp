@@ -6,8 +6,9 @@ using System.ComponentModel;
 
 namespace InventoryXpo {
 
-    public class Customer : BaseObject {
-        public Customer(Session session) : base(session) { }
+    public class Customer : XPObject {
+
+        public Customer(Session session) : base(session) {  }
         string fFirstName;
         public string FirstName {
             get { return fFirstName; }
@@ -22,10 +23,13 @@ namespace InventoryXpo {
         public string ContactName {
             get { return string.Concat(FirstName, " ", LastName); }
         }
-        [Association("CustomerOrders")]
+
+        [Association("CustomerOrders", typeof(Order))]
         public IList<Order> Orders {
             get { return GetList<Order>(nameof(Orders)); }
         }
+
+
     }
 
 }

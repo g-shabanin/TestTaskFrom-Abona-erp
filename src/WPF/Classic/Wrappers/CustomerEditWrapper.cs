@@ -45,6 +45,17 @@ namespace WpfAppXPO.Wrappers {
             }
         }
 
+        //XPCollection<Order> fOrderList;
+        //public XPCollection<Order> OrderList {
+        //    get {
+        //        return fOrderList;
+        //    }
+        //    set {
+        //        fOrderList = value;
+        //        OnPropertyChanged(nameof(OrderList));
+        //    }
+        //}
+
         Order fSelectedOrder;
         public Order SelectedOrder {
             get {

@@ -15,13 +15,19 @@ namespace WpfAppXPO.Wrappers {
 
         public CustomerListWrapper() {
             unitOfWork = new UnitOfWork(XpoDefault.DataLayer);
-            CustomerList = unitOfWork.Query<Customer>().OrderByDescending(t => t.Oid).ToObservableCollection();
+            #region Use ObservableCollection
+            //CustomerList = unitOfWork.Query<Customer>().OrderByDescending(t => t.Oid).ToObservableCollection();
+            #endregion
+            CustomerList = new XPCollection<Customer>(unitOfWork, unitOfWork.Query<Customer>().OrderByDescending(t => t.Oid));
         }
 
         public async Task ReloadAsync() {
             Customer currentItem = SelectedCustomer;
             unitOfWork = new UnitOfWork(XpoDefault.DataLayer);
-            CustomerList = await unitOfWork.Query<Customer>().OrderByDescending(t => t.Oid).ToObservableCollectionAsync();
+            #region Use ObservableCollection
+            //CustomerList = await unitOfWork.Query<Customer>().OrderByDescending(t => t.Oid).ToObservableCollectionAsync();
+            #endregion
+            CustomerList =  new XPCollection<Customer>(unitOfWork, await unitOfWork.Query<Customer>().OrderByDescending(t => t.Oid).ToObservableCollectionAsync());
             if(currentItem != null) {
                 SelectedCustomer = await unitOfWork.Query<Customer>().FirstOrDefaultAsync(t => t.Oid == currentItem.Oid);
             } else {
@@ -37,8 +43,21 @@ namespace WpfAppXPO.Wrappers {
             }
         }
 
-        ObservableCollection<Customer> fCustomerList;
-        public ObservableCollection<Customer> CustomerList {
+        #region Use ObservableCollection
+        //ObservableCollection<Customer> fCustomerList;
+        //public ObservableCollection<Customer> CustomerList {
+        //    get {
+        //        return fCustomerList;
+        //    }
+        //    set {
+        //        fCustomerList = value;
+        //        OnPropertyChanged(nameof(CustomerList));
+        //    }
+        //}
+        #endregion 
+
+        XPCollection<Customer> fCustomerList;
+        public XPCollection<Customer> CustomerList {
             get {
                 return fCustomerList;
             }
@@ -47,6 +66,7 @@ namespace WpfAppXPO.Wrappers {
                 OnPropertyChanged(nameof(CustomerList));
             }
         }
+
 
         Customer fSelectedCustomer;
         public Customer SelectedCustomer {

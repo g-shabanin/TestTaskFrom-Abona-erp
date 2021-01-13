@@ -83,6 +83,7 @@
     <Compile Include="DataAccess\DemoDataHelper.cs" />
     <Compile Include="DataAccess\Order.cs" />
     <Compile Include="CollectionExtensionMethods.cs" />
+    <Compile Include="DataAccess\OrderItem.cs" />
     <Compile Include="OrderEditWindow.xaml.cs">
       <DependentUpon>OrderEditWindow.xaml</DependentUpon>
     </Compile>

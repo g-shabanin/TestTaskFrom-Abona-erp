@@ -17,7 +17,7 @@ namespace InventoryXpo {
         }
 
         static IDataLayer CreateDataLayer(bool threadSafe) {
-            string connStr = ConfigurationManager.ConnectionStrings["XpoTutorial"].ConnectionString;
+            string connStr = ConfigurationManager.ConnectionStrings["InventoryXpo"].ConnectionString;
             //connStr = XpoDefault.GetConnectionPoolString(connStr);  // Uncomment this line if you use a database server like SQL Server, Oracle, PostgreSql etc.
             ReflectionDictionary dictionary = new ReflectionDictionary();
             dictionary.GetDataStoreSchema(PersistentTypes);   // Pass all of your persistent object types to this method.
