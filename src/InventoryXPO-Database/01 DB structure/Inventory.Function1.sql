@@ -1,4 +1,4 @@
-﻿CREATE FUNCTION [Inventory].[Function1]
+﻿CREATE FUNCTION [Function1]
 (
 	@param1 int,
 	@param2 char(5)

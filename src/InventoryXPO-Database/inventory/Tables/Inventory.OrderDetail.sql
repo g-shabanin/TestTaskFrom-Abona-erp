@@ -4,7 +4,10 @@
     [OrderId] INT NOT NULL, 
     [ItemId] INT NOT NULL,
     [OrderStatusType] INT NOT NULL DEFAULT 1,
-    constraint fk_user_rank foreign key (rank) references [Inventory].[OrderStatusType](id)
+    [OrderDetailQuantity] INT NOT NULL DEFAULT 0,
+    [OrderDetailPrice] FLOAT NOT NULL  DEFAULT 0.0,
+    CONSTRAINT [FK_OrderItems_Order] FOREIGN KEY ([OrderId]) REFERENCES [Inventory].[Order]([Id]), 
+    CONSTRAINT [FK_OrderItems_ProductItem] FOREIGN KEY ([ItemId]) REFERENCES [Inventory].[productItem]([Id])
 )
 
 GO

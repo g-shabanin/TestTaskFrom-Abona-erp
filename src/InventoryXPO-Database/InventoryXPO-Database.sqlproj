@@ -82,14 +82,14 @@
     <Folder Include="01 DB structure" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Inventory\Tables\Inventory.Customer.sql">
+    <BuildExtensionConfiguration Include="Inventory\Tables\Inventory.Customer.sql">
       <SuppressTSqlWarnings>71501,70001</SuppressTSqlWarnings>
-    </Build>
-    <PreDeploy Include="01 DB structure\CreateSchemas.sql" />
-    <Build Include="Inventory\Tables\Inventory.Order.sql" />
-    <Build Include="Inventory\Tables\Inventory.ProductItem.sql" />
-    <Build Include="Inventory\Tables\Inventory.OrderItems.sql" />
-    <Build Include="Inventory\Tables\Inventory.OrderStatusType.sql" />
+    </BuildExtensionConfiguration>
+    <BuildExtensionConfiguration Include="01 DB structure\CreateSchemas.sql" />
+    <DeploymentExtensionConfiguration Include="Inventory\Tables\Inventory.Order.sql" />
+    <BuildExtensionConfiguration Include="Inventory\Tables\Inventory.ProductItem.sql" />
+    <BuildExtensionConfiguration Include="Inventory\Tables\Inventory.OrderItems.sql" />
+    <BuildExtensionConfiguration Include="Inventory\Tables\Inventory.OrderStatusType.sql" />
     <Build Include="01 DB structure\Inventory.Function1.sql" />
   </ItemGroup>
   <ItemGroup>
@@ -100,12 +100,17 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="01 DB structure\ApplicationRole-InvetoryXPO-admin.sql" />
-    <Build Include="Inventory\Tables\Inventory.OrderDetail.sql" />
+    <DeploymentExtensionConfiguration Include="Inventory\Tables\Inventory.OrderDetail.sql" />
+    <None Include="01 DB structure\Inventory.CreateAll.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="InventoryXPO-Database.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="01 DB structure\DatabaseSeed.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InventoryXPO-Database.publish.xml" />
+    <None Include="InventoryXPO-Database_1.publish.xml" />
   </ItemGroup>
 </Project>

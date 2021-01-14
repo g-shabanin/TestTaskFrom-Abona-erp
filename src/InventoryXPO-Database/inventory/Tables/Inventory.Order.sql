@@ -3,9 +3,11 @@ DROP TABLE [Inventory].[Order]
 GO
 CREATE TABLE [Inventory].[Order]
 (
-    [Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Id] INT NOT NULL PRIMARY KEY IDENTITY,
+    [CustomerId] INT NOT NULL,
     [OrderDate] DATETIME NOT NULL, 
     [OrderNum] VARCHAR(50) NOT NULL, 
     [OrderStatus] INT NOT NULL, 
-    CONSTRAINT [FK_Order_OrderStatusType] FOREIGN KEY ([OrderStatus]) REFERENCES [Inventory].[OrderStatusType]([Id]) 
+CONSTRAINT [FK_Order_Customer] FOREIGN KEY (CustomerId)  REFERENCES [Inventory].[Customer] (Id),
+CONSTRAINT [FK_Order_OrderStatusType] FOREIGN KEY (OrderStatus)  REFERENCES [Inventory].[OrderStatusType] (Id),
 )

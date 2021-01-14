@@ -3,6 +3,6 @@ DROP TABLE [Inventory].[OrderStatusType]
 GO
 CREATE TABLE [Inventory].[OrderStatusType]
 (
-	[Id] INTEGER NOT NULL , -- no identity, so you can control the values
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
 	[StatusType] VARCHAR(20) NOT NULL UNIQUE 
 )

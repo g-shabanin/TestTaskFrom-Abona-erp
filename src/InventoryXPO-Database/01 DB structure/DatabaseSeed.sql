@@ -11,9 +11,17 @@ Post-Deployment Script Template
 */
 USE [Inventory]
 GO
-INSERT INTO [Inventory].[OrderStatusType] (Id, StatusType)
+INSERT INTO [Inventory].[OrderStatusType] (StatusType)
 VALUES
-  (1, 'New'),
-  (2, 'In Processing'),
-  (3, 'Paid'),
-  (4, 'Completed');
+  ('New'),
+  ('In Processing'),
+  ('Paid'),
+  ('Completed');
+GO
+INSERT INTO [Inventory].[ProductItem] (ItemName, ItemPrice)
+VALUES
+  ('Product 01', 100.01),
+  ('Product 02', 200.02),
+  ('Product 03', 300.03),
+  ('Product 04', 400.04);
+
