@@ -24,4 +24,18 @@ VALUES
   ('Product 02', 200.02),
   ('Product 03', 300.03),
   ('Product 04', 400.04);
+GO
+INSERT INTO [Inventory].[Item] (ItemName)
+VALUES
+  ('Item 01'),
+  ('Item 02'),
+  ('Item 03'),
+  ('Item 04');
+GO
+INSERT INTO [Inventory].[ItemInStock] (ItemId, QuantityOnStock)
+VALUES
+  (1, 1001),
+  (2, 2002),
+  (3, 3003),
+  (4, 4004);
 
