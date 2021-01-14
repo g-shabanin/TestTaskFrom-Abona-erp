@@ -102,6 +102,8 @@
     <Build Include="01 DB structure\ApplicationRole-InvetoryXPO-admin.sql" />
     <DeploymentExtensionConfiguration Include="Inventory\Tables\Inventory.OrderDetail.sql" />
     <None Include="01 DB structure\Inventory.CreateAll.sql" />
+    <None Include="Inventory\Tables\Inventory.Item.sql" />
+    <None Include="Inventory\Tables\Inventory.ItemInStock.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="InventoryXPO-Database.refactorlog" />

@@ -1,4 +1,7 @@
-﻿CREATE TABLE [Inventory].[OrderDetail]
+﻿IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[Inventory].[OrderDetail]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE [Inventory].[OrderDetail]
+GO
+CREATE TABLE [Inventory].[OrderDetail]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
     [OrderId] INT NOT NULL, 
@@ -6,8 +9,8 @@
     [OrderStatusType] INT NOT NULL DEFAULT 1,
     [OrderDetailQuantity] INT NOT NULL DEFAULT 0,
     [OrderDetailPrice] FLOAT NOT NULL  DEFAULT 0.0,
-    CONSTRAINT [FK_OrderItems_Order] FOREIGN KEY ([OrderId]) REFERENCES [Inventory].[Order]([Id]), 
-    CONSTRAINT [FK_OrderItems_ProductItem] FOREIGN KEY ([ItemId]) REFERENCES [Inventory].[productItem]([Id])
+    CONSTRAINT [FK_OrderId_Order] FOREIGN KEY ([OrderId]) REFERENCES [Inventory].[Order]([Id]), 
+    CONSTRAINT [FK_ItemsId_Item] FOREIGN KEY ([ItemId]) REFERENCES [Inventory].[Item]([Id])
 )
 
 GO
