@@ -9,33 +9,32 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-USE [Inventory]
-GO
-INSERT INTO [Inventory].[OrderStatusType] (StatusType)
+
+INSERT INTO [OrderStatusType] (Id, StatusType)
 VALUES
-  ('New'),
-  ('In Processing'),
-  ('Paid'),
-  ('Completed');
+  (1, 'New'),
+  (2, 'In Processing'),
+  (3, 'Paid'),
+  (4, 'Completed');
 GO
-INSERT INTO [Inventory].[ProductItem] (ItemName, ItemPrice)
+INSERT INTO [ProductItem] (Id, ItemName, ItemPrice)
 VALUES
-  ('Product 01', 100.01),
-  ('Product 02', 200.02),
-  ('Product 03', 300.03),
-  ('Product 04', 400.04);
+  (1, 'Product 01', 100.01),
+  (2, 'Product 02', 200.02),
+  (3, 'Product 03', 300.03),
+  (4, 'Product 04', 400.04);
 GO
-INSERT INTO [Inventory].[Item] (ItemName)
+INSERT INTO [Item] (Id, ItemName)
 VALUES
-  ('Item 01'),
-  ('Item 02'),
-  ('Item 03'),
-  ('Item 04');
+  (1, 'Item 01'),
+  (2, 'Item 02'),
+  (3, 'Item 03'),
+  (4, 'Item 04');
 GO
-INSERT INTO [Inventory].[ItemInStock] (ItemId, QuantityOnStock)
+INSERT INTO [ItemInStock] (Id, ItemId, QuantityOnStock)
 VALUES
-  (1, 1001),
-  (2, 2002),
-  (3, 3003),
-  (4, 4004);
+  (1, 1, 1001),
+  (2, 2, 2002),
+  (3, 3, 3003),
+  (4, 4, 4004);
 

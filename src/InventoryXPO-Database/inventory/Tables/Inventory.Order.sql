@@ -1,13 +1,13 @@
-﻿IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[Inventory].[Order]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
-DROP TABLE [Inventory].[Order]
+﻿IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = object_id(N'[Order]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP TABLE [Order]
 GO
-CREATE TABLE [Inventory].[Order]
+CREATE TABLE [Order]
 (
-    [Id] INT NOT NULL PRIMARY KEY IDENTITY,
-    [CustomerId] INT NOT NULL,
-    [OrderDate] DATETIME NOT NULL, 
-    [OrderNum] VARCHAR(50) NOT NULL, 
-    [OrderStatus] INT NOT NULL, 
-CONSTRAINT [FK_Order_Customer] FOREIGN KEY (CustomerId)  REFERENCES [Inventory].[Customer] (Id),
-CONSTRAINT [FK_Order_OrderStatusType] FOREIGN KEY (OrderStatus)  REFERENCES [Inventory].[OrderStatusType] (Id),
+	[Id] INT NOT NULL PRIMARY KEY,
+	[CustomerId] INT NOT NULL,
+	[OrderDate] DATETIME NOT NULL, 
+	[OrderNum] VARCHAR(50) NOT NULL, 
+	[OrderStatus] INT NOT NULL, 
+	CONSTRAINT [FK_Order_Customer] FOREIGN KEY (CustomerId)  REFERENCES [Customer] (Id),
+	CONSTRAINT [FK_Order_OrderStatusType] FOREIGN KEY (OrderStatus)  REFERENCES [OrderStatusType] (Id),
 )
