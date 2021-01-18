@@ -36,8 +36,8 @@
     <ChangeTrackingRetentionUnit>Minutes</ChangeTrackingRetentionUnit>
     <TargetFrameworkProfile />
     <PermissionSet>SAFE</PermissionSet>
-    <OutputPath>..\..\..\bin\$(Configuration)\</OutputPath>
-    <IntermediateOutputPath>..\..\..\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
+    <OutputPath>..\..\BuildResoult\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\BuildResoult\obj\$(Configuration)\$(MSBuildProjectName)\</IntermediateOutputPath>
     <DelayedDurability>DISABLED</DelayedDurability>
     <EnableFullTextSearch>True</EnableFullTextSearch>
   </PropertyGroup>
