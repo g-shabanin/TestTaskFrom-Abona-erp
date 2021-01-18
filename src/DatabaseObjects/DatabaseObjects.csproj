@@ -54,9 +54,21 @@
     <Compile Include="ORMDataModelCode\Item.Designer.cs">
       <DependentUpon>Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="ORMDataModelCode\ItemInStock.cs" />
+    <Compile Include="ORMDataModelCode\ItemInStock.Designer.cs">
+      <DependentUpon>ItemInStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="ORMDataModelCode\Order.cs" />
     <Compile Include="ORMDataModelCode\Order.Designer.cs">
       <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\OrderDetail.cs" />
+    <Compile Include="ORMDataModelCode\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ORMDataModelCode\OrderStatusType.cs" />
+    <Compile Include="ORMDataModelCode\OrderStatusType.Designer.cs">
+      <DependentUpon>OrderStatusType.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

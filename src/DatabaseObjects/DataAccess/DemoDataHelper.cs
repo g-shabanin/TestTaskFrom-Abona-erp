@@ -43,18 +43,38 @@ namespace InventoryXPO {
         private static readonly Random Random = new Random(0);
 
         public static void Seed(UnitOfWork uow) {
+            #region // Customers and Orders
+
             int ordersCnt = uow.Query<Order>().Count();
-            if(ordersCnt > 0)
-                return;
-            var names = new KeyValuePair<string, string>[firstNames.Length * lastNames.Length];
-            for(int i = 0; i < firstNames.Length * lastNames.Length; i++) {
-                int j = Random.Next(i + 1);
-                names[i] = names[j];
-                names[j] = new KeyValuePair<string, string>(firstNames[i / lastNames.Length], lastNames[i % lastNames.Length]);
+            if (ordersCnt <= 0)
+            {
+                var names = new KeyValuePair<string, string>[firstNames.Length * lastNames.Length];
+                for (int i = 0; i < firstNames.Length * lastNames.Length; i++)
+                {
+                    int j = Random.Next(i + 1);
+                    names[i] = names[j];
+                    names[j] = new KeyValuePair<string, string>(firstNames[i / lastNames.Length], lastNames[i % lastNames.Length]);
+                }
+                foreach (var t in names)
+                {
+                    CreateCustomer(uow, t.Key, t.Value);
+                }
+            } 
+            #endregion
+
+            #region // OrderStatusType
+            int orderStatusTypeCount = uow.Query<OrderStatusType>().Count();
+            if (orderStatusTypeCount <= 0)
+            {
+                OrderStatusType orderStatusType = new OrderStatusType(uow) { OrderStatus = 1, OrderStatusAsText = "New" };
+                orderStatusType = new OrderStatusType(uow) { OrderStatus = 2, OrderStatusAsText = "In processing" };
+                orderStatusType = new OrderStatusType(uow) { OrderStatus = 3, OrderStatusAsText = "Paid" };
+                orderStatusType = new OrderStatusType(uow) { OrderStatus = 4, OrderStatusAsText = "Completed" };
             }
-            foreach(var t in names) {
-                CreateCustomer(uow, t.Key, t.Value);
-            }
+                
+
+            #endregion
+
             uow.CommitChanges();
         }
 

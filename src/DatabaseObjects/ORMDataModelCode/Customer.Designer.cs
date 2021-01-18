@@ -19,17 +19,20 @@ namespace InventoryXPO
     public partial class Customer : XPObject
     {
         string fFirstName;
+        [DevExpress.Xpo.DisplayName(@"First Name")]
         public string FirstName
         {
             get { return fFirstName; }
             set { SetPropertyValue<string>(nameof(FirstName), ref fFirstName, value); }
         }
         string fLastName;
+        [DevExpress.Xpo.DisplayName(@"Last Name")]
         public string LastName
         {
             get { return fLastName; }
             set { SetPropertyValue<string>(nameof(LastName), ref fLastName, value); }
         }
+        [DevExpress.Xpo.DisplayName(@"Full Name")]
         [PersistentAlias("Concat([FirstName], ' ', [LastName])")]
         public string ContactName
         {

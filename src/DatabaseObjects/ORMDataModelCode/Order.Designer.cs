@@ -43,6 +43,23 @@ namespace InventoryXPO
             get { return fCustomer; }
             set { SetPropertyValue<Customer>(nameof(Customer), ref fCustomer, value); }
         }
+        string fOrderNum;
+        [DevExpress.Xpo.DisplayName(@"Order Number")]
+        public string OrderNum
+        {
+            get { return fOrderNum; }
+            set { SetPropertyValue<string>(nameof(OrderNum), ref fOrderNum, value); }
+        }
+        OrderStatusType fOrderStatus;
+        [Association(@"OrderReferencesOrderStatusType")]
+        [DevExpress.Xpo.DisplayName(@"Order Status")]
+        public OrderStatusType OrderStatus
+        {
+            get { return fOrderStatus; }
+            set { SetPropertyValue<OrderStatusType>(nameof(OrderStatus), ref fOrderStatus, value); }
+        }
+        [Association(@"OrderDetailReferencesOrder")]
+        public XPCollection<OrderDetail> OrderDetails { get { return GetCollection<OrderDetail>(nameof(OrderDetails)); } }
     }
 
 }

@@ -5,10 +5,10 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Documentation", "!Documentation", "{1C11A21D-99DA-49C4-9027-05D810294AAE}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\Doc\InventoryXPO   diagram.docx = ..\..\Doc\InventoryXPO   diagram.docx
-		..\..\Doc\InventoryXPO-diagram.pdf = ..\..\Doc\InventoryXPO-diagram.pdf
-		..\..\Doc\TaskCompletionInformation.txt = ..\..\Doc\TaskCompletionInformation.txt
-		..\..\Doc\TestTaskDevExpressMedium.txt = ..\..\Doc\TestTaskDevExpressMedium.txt
+		..\Doc\InventoryXPO   diagram.docx = ..\Doc\InventoryXPO   diagram.docx
+		..\Doc\InventoryXPO-diagram.pdf = ..\Doc\InventoryXPO-diagram.pdf
+		..\Doc\TaskCompletionInformation.txt = ..\Doc\TaskCompletionInformation.txt
+		..\Doc\TestTaskDevExpressMedium.txt = ..\Doc\TestTaskDevExpressMedium.txt
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.Classic", "WinForms.Classic\WinForms.Classic.csproj", "{01A487FB-9A20-4161-8F06-178D48B48526}"

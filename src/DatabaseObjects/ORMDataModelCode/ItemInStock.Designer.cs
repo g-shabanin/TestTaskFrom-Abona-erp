@@ -16,19 +16,21 @@ using System.Reflection;
 namespace InventoryXPO
 {
 
-    public partial class Item : XPObject
+    public partial class ItemInStock : XPObject
     {
-        string fItemName;
-        [DevExpress.Xpo.DisplayName(@"Item Name")]
-        public string ItemName
+        long fQuantityOnStock;
+        public long QuantityOnStock
         {
-            get { return fItemName; }
-            set { SetPropertyValue<string>(nameof(ItemName), ref fItemName, value); }
+            get { return fQuantityOnStock; }
+            set { SetPropertyValue<long>(nameof(QuantityOnStock), ref fQuantityOnStock, value); }
         }
-        [Association(@"OrderDetailReferencesItem")]
-        public XPCollection<OrderDetail> OrderDetails { get { return GetCollection<OrderDetail>(nameof(OrderDetails)); } }
+        Item fItem;
         [Association(@"ItemInStockReferencesItem")]
-        public XPCollection<ItemInStock> ItemInStocks { get { return GetCollection<ItemInStock>(nameof(ItemInStocks)); } }
+        public Item Item
+        {
+            get { return fItem; }
+            set { SetPropertyValue<Item>(nameof(Item), ref fItem, value); }
+        }
     }
 
 }
