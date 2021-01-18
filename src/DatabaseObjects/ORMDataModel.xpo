@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="68e58c9c-1140-4864-9475-408e85367453" namespace="InventoryXPO" dataBaseShemaInfo="H4sIAAAAAAAEAMWXWW/bOBDH3xfY72D4ObQoHqIYyCq2TlMEPZG0i77yGNrC6ghEyUm/fSnbcWKnRxZN7TfxP0NwfuTMiMxe3FblaAmtL5p6Oo4nePwi//uv7KXycNU1rZrDRe2aUfCq/emtL6bjRdddn0bRzc3N5IZOmnYeEYzj6Mu7t1dmAZVCRe07VRsYb2fZX88ah1VHo+yT0iX4YcnV+E55INxJ71UF+az3XVNBm0X32tbtVT1oedf2kEWbwdZ4VvhB+HxtVQe5U6UPTrvi1vd1X9gLm7tYYq4kQZImBjGwMZIuZYg7CTElxrEkyaKN83byrCn7qvY7BD+Ug2FgWBvz86L13TDOogfqjvfPGP8v50NWlnKbMI0RtQQjZligTphFOIaEMJMwquNHrGF69Bu4b9WxaDVOMWAiEZWOI8aIQKmxBsXG0TS2Rkqhn5v2Q2tD1R2e1WpODeCBlQRWixOkpQTEZCIcTzERkD6Z9XvqphafXMOrjThIAUttlE0sQ86FVGapIEgJZVAiY00UszKBx0n9OwX8sW1sb46U1AApti62KGWgEBOBVkseGpfgMgUjOYnFH0nqsxDR4XElMEKdSBBgxRBT2iKpY47S1OqUuDjhCp4b97yFYr7ojgDLhGPGScSpDrAEAGksHRKJM9zFVAhFnxv2/l97aFqCORVKMIRdYGQyfElLHNKMgQysmgp20JZ10UF1kI4ltJFWMoqSVIYappyilBCFRIolT4ykRJtn7VgD2XHalXRCOxtuHJbr8DciRCOtZThzSkLtamMtf3r9PuWQN+N7l2y48IINTdusxFG0lv9d347zM1i+ur1uwftJaHFqsiR4Ep+MNubpMJqwCT4Zzfqy61uY1tB3rSpPRh97XRbmDXz91PwH9VSHnhQLzqzAGJhUWXS3xGq9Wam8Bz8cwGW/3d3sHxtCA1fcbuJaS1e925EuoWqWsO+4Vvd9Z+GSn3+uzULVc7Bhz4bxemu+F0MWduYa2q44cmw/CCN7DTW0Ib1mTVVB3flNjj6Sd5zPwBfz8HlehFTYm7FrW01735flkDUvYaGWRdOGpHAqHHeol31LeEVFe8+o/BuVa51ubw0AAA==" generateStoredProcedures="false" fieldNameCase="Unchanged" useNameOf="true" connectionStringName="InventoryXPO" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" name="ORMDataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="5381cb28-b545-4a12-ac3b-532e5398c8f5">
+      <xpObject Id="f1905a92-936c-4ed1-9f84-5f9e132cf466" name="Customer" baseClass="XPObject" userFileName="Customer" designerFileName="Customer.Designer" className="Customer" persistent="Customer" virtualName="Customer" trackPropertiesModificationsOnRead="True">
+        <fields>
+          <generalXpObjectHasFields Id="abc357ba-7d95-47de-b409-33028c591858">
+            <field Id="485d64b0-3d20-4c42-964d-01e624c643b1" name="FirstName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="42c5b61e-a32d-46ce-b0d7-d5ca43482d3b">
+            <field Id="b080e029-39f5-4427-8cdc-1cf381dc997b" name="LastName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6c72fb5f-2ce3-4b7b-acdc-b4283fb37191">
+            <persistentAlias Id="8813771a-28a9-431c-ac0a-cf27dfe1409f" name="ContactName" virtualColumnType="String" expression="Concat([FirstName], ' ', [LastName])" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="242886ae-3a82-45cc-9e12-692d3d3f8f98" sourceCollectionName="Orders" name="CustomerOrders" targetFieldName="Customer">
+            <xpObjectMoniker Id="9bcad6d4-ff4d-4872-a7ac-691b2a4d96e1" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="bcf2621a-324b-48e8-991d-bb070921d36d">
+            <collectionField Id="caa6065f-acce-4eda-bce9-9417140d35aa" name="Orders" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="a28a08e7-4b39-42fd-9ebb-eafb340b44f8">
+      <xpObject Id="9bcad6d4-ff4d-4872-a7ac-691b2a4d96e1" name="Order" baseClass="XPObject" userFileName="Order" designerFileName="Order.Designer" className="Order" virtualName="Order">
+        <fields>
+          <generalXpObjectHasFields Id="69f21a47-22a3-451a-abf7-4434b8d446f1">
+            <field Id="ee80df1d-84ea-4772-b95c-47598ec95217" name="ProductName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b0be2316-e741-414b-adda-2f795d2245b2">
+            <field Id="9e423f76-e0a4-4abd-9b15-88db82f165ae" name="OrderDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="26d1aa38-cb2e-496e-8efa-312a281a86c5">
+            <field Id="947f4cf9-53b4-42ee-b09f-76fc5f1377a3" name="Freight" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="768975d7-d77e-4894-8f48-ddf50575869e">
+            <field Id="20537a74-0f9f-4974-9d2f-b44e9377b374" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="0b22e684-9c56-4d35-bc1f-e67844415f94">
+      <xpObject Id="7bc9d943-689a-4353-822a-780956c932bc" name="Item" baseClass="XPObject" userFileName="Item" designerFileName="Item.Designer" className="Item" virtualName="Item">
+        <fields>
+          <generalXpObjectHasFields Id="b884e528-e733-457a-89d5-454164df9254">
+            <field Id="9f7bfdb0-d5be-422b-bb94-032165bcdd5e" name="ItemName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+</dataBaseObjectModel>

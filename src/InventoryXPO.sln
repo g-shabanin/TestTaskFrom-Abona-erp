@@ -19,6 +19,8 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "InventoryXPO-Database", "In
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{2A2F686B-43BA-4024-BE39-1001C72D42E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseObjects", "DatabaseObjects\DatabaseObjects.csproj", "{76329C4F-8675-4DC7-9A83-5D02D3F45ABD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,13 +41,15 @@ Global
 		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{76329C4F-8675-4DC7-9A83-5D02D3F45ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76329C4F-8675-4DC7-9A83-5D02D3F45ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76329C4F-8675-4DC7-9A83-5D02D3F45ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76329C4F-8675-4DC7-9A83-5D02D3F45ABD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{01A487FB-9A20-4161-8F06-178D48B48526} = {EE63EA0F-9EA1-4246-AF4A-D5CBAE957718}
-		{C2D7B1F3-BD8C-48C2-B57A-522D27993290} = {8B6A8E2C-1946-4AA0-8642-05B74A77E6A6}
 		{9937C8FC-C2C0-41E2-B84B-1D3F3BDF78CD} = {2A2F686B-43BA-4024-BE39-1001C72D42E5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

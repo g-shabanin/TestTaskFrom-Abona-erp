@@ -66,10 +66,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\ConnectionHelper.cs" />
-    <Compile Include="DataAccess\Customer.cs" />
-    <Compile Include="DataAccess\DemoDataHelper.cs" />
-    <Compile Include="DataAccess\Order.cs" />
     <Compile Include="Forms\OrdersListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +138,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DatabaseObjects\DatabaseObjects.csproj">
+      <Project>{76329c4f-8675-4dc7-9a83-5d02d3f45abd}</Project>
+      <Name>DatabaseObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
