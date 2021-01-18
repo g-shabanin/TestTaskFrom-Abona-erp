@@ -59,7 +59,7 @@ namespace InventoryXPO {
                 {
                     CreateCustomer(uow, t.Key, t.Value);
                 }
-            } 
+            }
             #endregion
 
             #region // OrderStatusType
@@ -79,6 +79,7 @@ namespace InventoryXPO {
         }
 
         private static void CreateCustomer(UnitOfWork uow, string firstName, string lastName) {
+            OrderStatusType orderStatusType = new OrderStatusType(uow) { OrderStatus = 4, OrderStatusAsText = "Completed" };
             Customer customer = new Customer(uow);
             customer.FirstName = firstName;
             customer.LastName = lastName;
@@ -88,6 +89,7 @@ namespace InventoryXPO {
                 order.OrderDate = new DateTime(Random.Next(2014, 2024), Random.Next(1, 12), Random.Next(1, 28));
                 order.Freight = Random.Next(1000) / 100m;
                 order.Customer = customer;
+                order.OrderStatus = orderStatusType;
             }
         }
     }

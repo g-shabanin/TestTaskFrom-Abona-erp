@@ -5,10 +5,10 @@
       <xpObject Id="f1905a92-936c-4ed1-9f84-5f9e132cf466" name="Customer" baseClass="XPObject" userFileName="Customer" designerFileName="Customer.Designer" className="Customer" persistent="Customer" virtualName="Customer" trackPropertiesModificationsOnRead="True">
         <fields>
           <generalXpObjectHasFields Id="abc357ba-7d95-47de-b409-33028c591858">
-            <field Id="485d64b0-3d20-4c42-964d-01e624c643b1" name="FirstName" displayName="First Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+            <field Id="485d64b0-3d20-4c42-964d-01e624c643b1" name="FirstName" displayName="First Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="40" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="42c5b61e-a32d-46ce-b0d7-d5ca43482d3b">
-            <field Id="b080e029-39f5-4427-8cdc-1cf381dc997b" name="LastName" displayName="Last Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+            <field Id="b080e029-39f5-4427-8cdc-1cf381dc997b" name="LastName" displayName="Last Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="40" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="6c72fb5f-2ce3-4b7b-acdc-b4283fb37191">
             <persistentAlias Id="8813771a-28a9-431c-ac0a-cf27dfe1409f" name="ContactName" virtualColumnType="String" expression="Concat([FirstName], ' ', [LastName])" displayName="Full Name" />
@@ -42,10 +42,10 @@
             <field Id="20537a74-0f9f-4974-9d2f-b44e9377b374" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="c5f06697-d6b8-45a8-8e01-404d71b4dd47">
-            <field Id="c5345874-a6be-4a57-ba59-a6c4f32377ee" name="OrderNum" displayName="Order Number" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+            <field Id="c5345874-a6be-4a57-ba59-a6c4f32377ee" name="OrderNum" displayName="Order Number" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="40" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="8a7c40eb-bf7f-40a2-985f-4cda4c722ccd">
-            <field Id="4dfa7dfd-d207-45fb-bea2-0824a04feb9a" name="OrderStatus" displayName="Order Status" virtualColumnType="OrderStatusType" logicalType="OrderStatusType" delayedUpdateModifiedOnly="false" />
+            <field Id="4dfa7dfd-d207-45fb-bea2-0824a04feb9a" name="OrderStatus" displayName="Order Status" virtualColumnType="OrderStatusType" logicalType="OrderStatusType" delayedUpdateModifiedOnly="false" dbDefaultValue="1" />
           </generalXpObjectHasFields>
         </fields>
         <saTargets>
@@ -64,7 +64,7 @@
       <xpObject Id="7bc9d943-689a-4353-822a-780956c932bc" name="Item" baseClass="XPObject" userFileName="Item" designerFileName="Item.Designer" className="Item" virtualName="Item">
         <fields>
           <generalXpObjectHasFields Id="b884e528-e733-457a-89d5-454164df9254">
-            <field Id="9f7bfdb0-d5be-422b-bb94-032165bcdd5e" name="ItemName" displayName="Item Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+            <field Id="9f7bfdb0-d5be-422b-bb94-032165bcdd5e" name="ItemName" displayName="Item Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
           </generalXpObjectHasFields>
         </fields>
         <saTargets>
@@ -120,7 +120,7 @@
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="317875de-f13d-4ad3-a4c9-2400799b690d">
-      <xpObject Id="f49c9847-9c05-4054-ba40-d189598bccbd" name="OrderStatusType" baseClass="XPObject" userFileName="OrderStatusType" designerFileName="OrderStatusType.Designer" className="OrderStatusType" nonPersistent="true" virtualName="OrderStatusType">
+      <xpObject Id="f49c9847-9c05-4054-ba40-d189598bccbd" name="OrderStatusType" baseClass="XPObject" userFileName="OrderStatusType" designerFileName="OrderStatusType.Designer" className="OrderStatusType" virtualName="OrderStatusType">
         <fields>
           <generalXpObjectHasFields Id="dc25ff5f-4ada-4afa-9906-d331351f5bc6">
             <field Id="bcdfe160-dec1-4d22-a02b-1b386333f346" name="OrderStatus" columnType="Int16" virtualColumnType="Int16" delayedUpdateModifiedOnly="false" />

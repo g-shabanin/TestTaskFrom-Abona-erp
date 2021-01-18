@@ -44,6 +44,7 @@ namespace InventoryXPO
             set { SetPropertyValue<Customer>(nameof(Customer), ref fCustomer, value); }
         }
         string fOrderNum;
+        [Size(40)]
         [DevExpress.Xpo.DisplayName(@"Order Number")]
         public string OrderNum
         {
@@ -51,6 +52,7 @@ namespace InventoryXPO
             set { SetPropertyValue<string>(nameof(OrderNum), ref fOrderNum, value); }
         }
         OrderStatusType fOrderStatus;
+        [ColumnDbDefaultValue("1")]
         [Association(@"OrderReferencesOrderStatusType")]
         [DevExpress.Xpo.DisplayName(@"Order Status")]
         public OrderStatusType OrderStatus

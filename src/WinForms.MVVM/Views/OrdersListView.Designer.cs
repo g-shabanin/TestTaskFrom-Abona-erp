@@ -38,6 +38,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.mvvmContext1 = new DevExpress.Utils.MVVM.MVVMContext(this.components);
+            this.OrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).BeginInit();
@@ -45,19 +46,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.mvvmContext1)).BeginInit();
             this.SuspendLayout();
             // 
-            // CustomersBindingSource
+            // ordersBindingSource
             // 
-            this.ordersBindingSource.DisplayableProperties = "Oid;ProductName";
+            this.ordersBindingSource.DisplayableProperties = "Oid;ProductName;OrderStatus.OrderStatusAsText;OrderNum";
             this.ordersBindingSource.ObjectType = typeof(InventoryXPO.Order);
             // 
             // ordersGridControl
             // 
             this.ordersGridControl.DataSource = this.ordersBindingSource;
             this.ordersGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ordersGridControl.Location = new System.Drawing.Point(0, 162);
+            this.ordersGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ordersGridControl.Location = new System.Drawing.Point(0, 193);
             this.ordersGridControl.MainView = this.ordersGridView;
+            this.ordersGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ordersGridControl.Name = "ordersGridControl";
-            this.ordersGridControl.Size = new System.Drawing.Size(800, 262);
+            this.ordersGridControl.Size = new System.Drawing.Size(933, 331);
             this.ordersGridControl.TabIndex = 0;
             this.ordersGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ordersGridView});
@@ -67,7 +70,9 @@
             this.ordersGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colOid,
             this.colProductName,
-            this.colOrderDate});
+            this.colOrderDate,
+            this.OrderStatus});
+            this.ordersGridView.DetailHeight = 431;
             this.ordersGridView.GridControl = this.ordersGridControl;
             this.ordersGridView.Name = "ordersGridView";
             this.ordersGridView.OptionsBehavior.Editable = false;
@@ -75,21 +80,27 @@
             // colOid
             // 
             this.colOid.FieldName = "Oid";
+            this.colOid.MinWidth = 23;
             this.colOid.Name = "colOid";
+            this.colOid.Width = 87;
             // 
             // colProductName
             // 
             this.colProductName.FieldName = "ProductName";
+            this.colProductName.MinWidth = 23;
             this.colProductName.Name = "colProductName";
             this.colProductName.Visible = true;
             this.colProductName.VisibleIndex = 0;
+            this.colProductName.Width = 87;
             // 
             // colOrderDate
             // 
             this.colOrderDate.FieldName = "OrderDate";
+            this.colOrderDate.MinWidth = 23;
             this.colOrderDate.Name = "colOrderDate";
             this.colOrderDate.Visible = true;
             this.colOrderDate.VisibleIndex = 1;
+            this.colOrderDate.Width = 87;
             // 
             // ribbonControl1
             // 
@@ -100,11 +111,12 @@
             this.btnNew,
             this.btnDelete});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 3;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(800, 162);
+            this.ribbonControl1.Size = new System.Drawing.Size(933, 193);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnNew
@@ -136,10 +148,11 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 424);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 524);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(800, 26);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(933, 30);
             // 
             // ribbonPage2
             // 
@@ -151,14 +164,25 @@
             this.mvvmContext1.ContainerControl = this;
             this.mvvmContext1.ViewModelType = typeof(WinForms.MVVM.ViewModels.OrderListViewModel);
             // 
-            // CustomersListView
+            // OrderStatus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.OrderStatus.Caption = "Order Status";
+            this.OrderStatus.FieldName = "OrderStatus.OrderStatusAsText";
+            this.OrderStatus.MinWidth = 25;
+            this.OrderStatus.Name = "OrderStatus";
+            this.OrderStatus.Visible = true;
+            this.OrderStatus.VisibleIndex = 2;
+            this.OrderStatus.Width = 87;
+            // 
+            // OrdersListView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(933, 554);
             this.Controls.Add(this.ordersGridControl);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrdersListView";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
@@ -189,6 +213,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNew;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
         private DevExpress.Utils.MVVM.MVVMContext mvvmContext1;
+        private DevExpress.XtraGrid.Columns.GridColumn OrderStatus;
     }
 }
 

@@ -5,18 +5,34 @@ using System;
 using System.Configuration;
 
 namespace InventoryXPO {
-    public static class ConnectionHelper {
+    public static class ConnectionHelper
+    {
 
         static readonly Type[] PersistentTypes = new Type[]{
+            typeof(Customer),
             typeof(Order),
-            typeof(Customer)
+            typeof(Item),
+            typeof(ItemInStock),
+            typeof(OrderDetail),
+            typeof(OrderStatusType)
+        };
+        static Type[] persistentTypes = new Type[] {
+            typeof(Customer),
+            typeof(Order),
+            typeof(Item),
+            typeof(ItemInStock),
+            typeof(OrderDetail)
         };
 
-        public static void Connect(bool threadSafe = true) {
+
+
+        public static void Connect(bool threadSafe = true)
+        {
             XpoDefault.DataLayer = CreateDataLayer(threadSafe);
         }
 
-        static IDataLayer CreateDataLayer(bool threadSafe) {
+        static IDataLayer CreateDataLayer(bool threadSafe)
+        {
             string connStr = ConfigurationManager.ConnectionStrings["InventoryXPO"].ConnectionString;
             //connStr = XpoDefault.GetConnectionPoolString(connStr);  // Uncomment this line if you use a database server like SQL Server, Oracle, PostgreSql etc.
             ReflectionDictionary dictionary = new ReflectionDictionary();

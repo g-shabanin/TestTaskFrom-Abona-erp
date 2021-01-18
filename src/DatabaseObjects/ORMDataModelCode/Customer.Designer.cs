@@ -19,6 +19,7 @@ namespace InventoryXPO
     public partial class Customer : XPObject
     {
         string fFirstName;
+        [Size(40)]
         [DevExpress.Xpo.DisplayName(@"First Name")]
         public string FirstName
         {
@@ -26,6 +27,7 @@ namespace InventoryXPO
             set { SetPropertyValue<string>(nameof(FirstName), ref fFirstName, value); }
         }
         string fLastName;
+        [Size(40)]
         [DevExpress.Xpo.DisplayName(@"Last Name")]
         public string LastName
         {

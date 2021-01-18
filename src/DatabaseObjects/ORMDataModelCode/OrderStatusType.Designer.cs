@@ -16,7 +16,6 @@ using System.Reflection;
 namespace InventoryXPO
 {
 
-    [NonPersistent]
     public partial class OrderStatusType : XPObject
     {
         short fOrderStatus;

@@ -19,6 +19,7 @@ namespace InventoryXPO
     public partial class Item : XPObject
     {
         string fItemName;
+        [Size(200)]
         [DevExpress.Xpo.DisplayName(@"Item Name")]
         public string ItemName
         {
