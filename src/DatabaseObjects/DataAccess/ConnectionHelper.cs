@@ -3,6 +3,9 @@ using DevExpress.Xpo.DB;
 using DevExpress.Xpo.Metadata;
 using System;
 using System.Configuration;
+using System.IO;
+using System.Reflection;
+using System.Xml.Linq;
 
 namespace InventoryXPO {
     public static class ConnectionHelper
@@ -14,17 +17,8 @@ namespace InventoryXPO {
             typeof(Item),
             typeof(ItemInStock),
             typeof(OrderDetail),
-            typeof(OrderStatusType)
+            typeof(OrderStatusEnumTable)
         };
-        static Type[] persistentTypes = new Type[] {
-            typeof(Customer),
-            typeof(Order),
-            typeof(Item),
-            typeof(ItemInStock),
-            typeof(OrderDetail)
-        };
-
-
 
         public static void Connect(bool threadSafe = true)
         {
@@ -33,8 +27,24 @@ namespace InventoryXPO {
 
         static IDataLayer CreateDataLayer(bool threadSafe)
         {
-            string connStr = ConfigurationManager.ConnectionStrings["InventoryXPO"].ConnectionString;
-            //connStr = XpoDefault.GetConnectionPoolString(connStr);  // Uncomment this line if you use a database server like SQL Server, Oracle, PostgreSql etc.
+            //Configuration config = null;
+            //string assemblyFolder = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            //string assmblyName = Assembly.GetExecutingAssembly().GetName().Name;
+
+
+            //try
+            //{
+            //    var s = assemblyFolder + "\\" + assmblyName + ".dll.config";
+            //    config = ConfigurationManager.OpenExeConfiguration(s);
+            //    var value = config.ConnectionStrings.CurrentConfiguration.Sections;
+            //}
+            //catch (Exception ex)
+            //{
+            //    //handle errror here.. means DLL has no sattelite configuration file.
+            //}
+            //string connStr = ConfigurationManager.ConnectionStrings["InventoryXPO"].ConnectionString;
+            string connStr = "XpoProvider=InMemoryDataStore";
+            connStr = XpoDefault.GetConnectionPoolString(connStr);  // Uncomment this line if you use a database server like SQL Server, Oracle, PostgreSql etc.
             ReflectionDictionary dictionary = new ReflectionDictionary();
             dictionary.GetDataStoreSchema(PersistentTypes);   // Pass all of your persistent object types to this method.
             AutoCreateOption autoCreateOption = AutoCreateOption.DatabaseAndSchema;  // Use AutoCreateOption.DatabaseAndSchema if the database or tables do not exist. Use AutoCreateOption.SchemaAlreadyExists if the database already exists.

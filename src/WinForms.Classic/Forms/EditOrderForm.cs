@@ -46,5 +46,10 @@ namespace WinForms.Classic.Forms {
         private void btnClose_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e) {
             Close();
         }
+
+        private void OrderBindingSource_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
+        {
+
+        }
     }
 }

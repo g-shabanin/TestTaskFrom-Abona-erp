@@ -12,6 +12,16 @@ namespace InventoryXPO
     {
         public Order(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
+
+        //OrderStatusType fOrderStatus;
+        //[ValueConverter(typeof(InventoryXPO.Tools.OrderStatusTypeValueConverter))]
+        //[NonPersistent]
+        //public OrderStatusType OrderStatus
+        //{
+        //    get { return fOrderStatus; }
+        //    set { SetPropertyValue<OrderStatusType>(nameof(OrderStatus), ref fOrderStatus, value); }
+        //}
+
     }
 
 }

@@ -51,14 +51,18 @@ namespace InventoryXPO
             get { return fOrderNum; }
             set { SetPropertyValue<string>(nameof(OrderNum), ref fOrderNum, value); }
         }
-        OrderStatusType fOrderStatus;
-        [ColumnDbDefaultValue("1")]
-        [Association(@"OrderReferencesOrderStatusType")]
-        [DevExpress.Xpo.DisplayName(@"Order Status")]
-        public OrderStatusType OrderStatus
+        string fOrderStatus;
+        [Persistent(@"OrderStatusType")]
+        [ValueConverter(typeof(InventoryXPO.Tools.OrderStatusTypeValueConverter))]
+        public string OrderStatus
         {
             get { return fOrderStatus; }
-            set { SetPropertyValue<OrderStatusType>(nameof(OrderStatus), ref fOrderStatus, value); }
+            set { SetPropertyValue<string>(nameof(OrderStatus), ref fOrderStatus, value); }
+        }
+        [PersistentAlias("[OrderDetails][].Count()")]
+        public int OrderDetailCount
+        {
+            get { return (int)(EvaluateAlias(nameof(OrderDetailCount))); }
         }
         [Association(@"OrderDetailReferencesOrder")]
         public XPCollection<OrderDetail> OrderDetails { get { return GetCollection<OrderDetail>(nameof(OrderDetails)); } }

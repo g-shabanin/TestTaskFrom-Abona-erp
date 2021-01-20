@@ -12,7 +12,8 @@ namespace WinForms.MVVM.ViewModels {
             Orders = new XPInstantFeedbackView(typeof(Order), new ServerViewProperty[] {
                     new ServerViewProperty("Oid","Oid"),
                     new ServerViewProperty("OrderDate", SortDirection.Ascending, new OperandProperty("OrderDate")),
-                    new ServerViewProperty("ProductName", "ProductName")
+                    new ServerViewProperty("ProductName", "ProductName"),
+                    new ServerViewProperty("OrderStatus", "OrderStatus")
                 }, null);
         }
         public virtual IListSource Orders {

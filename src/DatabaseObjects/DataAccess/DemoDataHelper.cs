@@ -1,10 +1,13 @@
-﻿using DevExpress.Xpo;
+﻿using DevExpress.Data.Filtering;
+using DevExpress.Xpo;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace InventoryXPO {
-    public static class DemoDataHelper {
+namespace InventoryXPO
+{
+    public static class DemoDataHelper
+    {
         private static readonly string[] firstNames = new string[] {
             "Peter", "Ryan", "Richard", "Tom", "Mark", "Steve",
             "Jimmy", "Jeffrey", "Andrew", "Dave", "Bert", "Mike",
@@ -42,7 +45,40 @@ namespace InventoryXPO {
             "Rhönbräu Klosterbier", "Lakkalikööri", "Original Frankfurter grüne Soße" };
         private static readonly Random Random = new Random(0);
 
-        public static void Seed(UnitOfWork uow) {
+        public static void Seed(UnitOfWork uow)
+        {
+            #region // OrderStatusEnumTable
+            int orderStatusTypeCount = uow.Query<OrderStatusEnumTable>().Count();
+            if (orderStatusTypeCount <= 0)
+            {
+                OrderStatusEnumTable orderStatusType = new OrderStatusEnumTable(uow) { Value = 1, OrderStatusAsText = "New" };
+                orderStatusType = new OrderStatusEnumTable(uow) { Value = 2, OrderStatusAsText = "In processing" };
+                orderStatusType = new OrderStatusEnumTable(uow) { Value = 3, OrderStatusAsText = "Paid" };
+                orderStatusType = new OrderStatusEnumTable(uow) { Value = 4, OrderStatusAsText = "Completed" };
+                uow.CommitChanges();
+            }
+
+            #endregion
+
+            int itemCount = uow.Query<Item>().Count();
+            #region // Item
+            if (orderStatusTypeCount <= 0)
+            {
+                Item item = new Item(uow) { ItemName = "Item Name 001" };
+                item = new Item(uow) { ItemName = "Item Name 002" };
+                item = new Item(uow) { ItemName = "Item Name 003" };
+                item = new Item(uow) { ItemName = "Item Name 004" };
+                item = new Item(uow) { ItemName = "Item Name 005" };
+                item = new Item(uow) { ItemName = "Item Name 006" };
+                item = new Item(uow) { ItemName = "Item Name 007" };
+                item = new Item(uow) { ItemName = "Item Name 008" };
+                item = new Item(uow) { ItemName = "Item Name 009" };
+                item = new Item(uow) { ItemName = "Item Name 010" };
+                uow.CommitChanges();
+            }
+            #endregion
+
+
             #region // Customers and Orders
 
             int ordersCnt = uow.Query<Order>().Count();
@@ -62,34 +98,35 @@ namespace InventoryXPO {
             }
             #endregion
 
-            #region // OrderStatusType
-            int orderStatusTypeCount = uow.Query<OrderStatusType>().Count();
-            if (orderStatusTypeCount <= 0)
-            {
-                OrderStatusType orderStatusType = new OrderStatusType(uow) { OrderStatus = 1, OrderStatusAsText = "New" };
-                orderStatusType = new OrderStatusType(uow) { OrderStatus = 2, OrderStatusAsText = "In processing" };
-                orderStatusType = new OrderStatusType(uow) { OrderStatus = 3, OrderStatusAsText = "Paid" };
-                orderStatusType = new OrderStatusType(uow) { OrderStatus = 4, OrderStatusAsText = "Completed" };
-            }
-                
-
-            #endregion
 
             uow.CommitChanges();
         }
 
-        private static void CreateCustomer(UnitOfWork uow, string firstName, string lastName) {
-            OrderStatusType orderStatusType = new OrderStatusType(uow) { OrderStatus = 4, OrderStatusAsText = "Completed" };
+        private static void CreateCustomer(UnitOfWork uow, string firstName, string lastName)
+        {
             Customer customer = new Customer(uow);
             customer.FirstName = firstName;
             customer.LastName = lastName;
-            for(int i = 0; i < 10; i++) {
+            //for (int i = 0; i < 10; i++)
+            {
+                OrderStatusEnumTable orderStatusTypeEnum = (OrderStatusEnumTable)uow.GetObjectByKey(typeof(OrderStatusEnumTable), Random.Next(1, 4));
+                OrderStatusType orderStatusType = new OrderStatusType() { Key = orderStatusTypeEnum.Value, OrderStatus = orderStatusTypeEnum.OrderStatusAsText };
                 Order order = new Order(uow);
+                OrderDetail orderDetail = new OrderDetail(uow);
+                orderDetail.OrderId = order;
+
                 order.ProductName = productNames[Random.Next(productNames.Length)];
                 order.OrderDate = new DateTime(Random.Next(2014, 2024), Random.Next(1, 12), Random.Next(1, 28));
                 order.Freight = Random.Next(1000) / 100m;
                 order.Customer = customer;
-                order.OrderStatus = orderStatusType;
+                order.OrderStatus = orderStatusType.OrderStatus;
+
+                for (int j = 0; j < Random.Next(1, 8); j++)
+                {
+                    Item item = (Item)uow.GetObjectByKey(typeof(Item), Random.Next(1, 10));
+                    orderDetail.Items.Add(item);
+                }
+                                
             }
         }
     }

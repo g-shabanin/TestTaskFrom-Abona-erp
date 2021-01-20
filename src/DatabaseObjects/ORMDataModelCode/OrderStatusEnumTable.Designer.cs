@@ -16,22 +16,22 @@ using System.Reflection;
 namespace InventoryXPO
 {
 
-    public partial class OrderStatusType : XPObject
+    public partial class OrderStatusEnumTable : XPObject
     {
-        short fOrderStatus;
-        public short OrderStatus
-        {
-            get { return fOrderStatus; }
-            set { SetPropertyValue<short>(nameof(OrderStatus), ref fOrderStatus, value); }
-        }
         string fOrderStatusAsText;
+        [Indexed(Name = @"IndexOrderStatusAsText", Unique = true)]
         public string OrderStatusAsText
         {
             get { return fOrderStatusAsText; }
             set { SetPropertyValue<string>(nameof(OrderStatusAsText), ref fOrderStatusAsText, value); }
         }
-        [Association(@"OrderReferencesOrderStatusType")]
-        public XPCollection<Order> Orders { get { return GetCollection<Order>(nameof(Orders)); } }
+        short fValue;
+        [Indexed(Name = @"IndexValue", Unique = true)]
+        public short Value
+        {
+            get { return fValue; }
+            set { SetPropertyValue<short>(nameof(Value), ref fValue, value); }
+        }
     }
 
 }

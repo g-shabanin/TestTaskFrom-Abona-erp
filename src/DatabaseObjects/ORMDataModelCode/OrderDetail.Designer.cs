@@ -32,12 +32,12 @@ namespace InventoryXPO
             get { return fItemId; }
             set { SetPropertyValue<Item>(nameof(ItemId), ref fItemId, value); }
         }
-        string fOrderDetailQuantity;
+        short fOrderDetailQuantity;
         [DevExpress.Xpo.DisplayName(@"Order Quantity")]
-        public string OrderDetailQuantity
+        public short OrderDetailQuantity
         {
             get { return fOrderDetailQuantity; }
-            set { SetPropertyValue<string>(nameof(OrderDetailQuantity), ref fOrderDetailQuantity, value); }
+            set { SetPropertyValue<short>(nameof(OrderDetailQuantity), ref fOrderDetailQuantity, value); }
         }
         [Association(@"OrderDetailReferencesItem")]
         public XPCollection<Item> Items { get { return GetCollection<Item>(nameof(Items)); } }
