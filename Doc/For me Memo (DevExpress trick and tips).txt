@@ -1,0 +1,14 @@
+DevExpress  trick and tips
+
+1. 
+How to use two XtraGrid controls to display collections of persistent objects with a one-to-many association
+How to use two grid controls to display one-to-many relationship
+https://supportcenter.devexpress.com/ticket/details/a2750/how-to-use-two-xtragrid-controls-to-display-collections-of-persistent-objects-with-a-one
+example 
+https://github.com/DevExpress-Examples/how-to-use-two-grid-controls-to-display-one-to-many-relationship-e798
+
+2. 
+How to use XPCollection with LookUpEdit to show master and detail data
+https://supportcenter.devexpress.com/ticket/details/t467686/how-to-use-xpcollection-with-lookupedit-to-show-master-and-detail-data
+
+

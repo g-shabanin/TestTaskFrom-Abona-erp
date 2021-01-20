@@ -33,7 +33,6 @@
             this.colOid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colContactName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrdersGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.OrdersBindingSource = new DevExpress.Xpo.XPBindingSource(this.components);
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnNew = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
@@ -42,8 +41,7 @@
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.xpCollection1 = new DevExpress.Xpo.XPCollection(this.components);
-            this.unitOfWork1 = new DevExpress.Xpo.UnitOfWork(this.components);
+            this.GridLinkCollection1 = new DevExpress.Xpo.XPCollection(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOrderDate = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,11 +55,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CustomersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitOfWork1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridLinkCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,10 +129,6 @@
             this.OrdersGridView.GridControl = this.CustomersGridControl;
             this.OrdersGridView.Name = "OrdersGridView";
             // 
-            // OrdersBindingSource
-            // 
-            this.OrdersBindingSource.ObjectType = typeof(InventoryXPO.Order);
-            // 
             // ribbonControl1
             // 
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
@@ -202,7 +194,7 @@
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.xpCollection1;
+            this.gridControl1.DataSource = this.GridLinkCollection1;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gridControl1.Location = new System.Drawing.Point(0, 393);
             this.gridControl1.MainView = this.gridView1;
@@ -213,13 +205,9 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // xpCollection1
+            // GridLinkCollection1
             // 
-            this.xpCollection1.DisplayableProperties = "ProductName;OrderDate;Freight;Customer;OrderNum;OrderStatus;OrderDetailCount";
-            this.xpCollection1.ObjectType = typeof(InventoryXPO.Order);
-            this.xpCollection1.Session = this.unitOfWork1;
-            this.xpCollection1.Sorting.AddRange(new DevExpress.Xpo.SortProperty[] {
-            new DevExpress.Xpo.SortProperty("[Customer]", DevExpress.Xpo.DB.SortingDirection.Ascending)});
+            this.GridLinkCollection1.ObjectType = typeof(InventoryXPO.Customer);
             // 
             // gridView1
             // 
@@ -320,11 +308,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CustomersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CustomersGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrdersGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xpCollection1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.unitOfWork1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridLinkCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -345,13 +331,11 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.BarButtonItem btnNew;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
-        private DevExpress.Xpo.XPBindingSource OrdersBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView OrdersGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView OrderGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.Xpo.XPCollection xpCollection1;
-        private DevExpress.Xpo.UnitOfWork unitOfWork1;
+        private DevExpress.Xpo.XPCollection GridLinkCollection1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colProductName;
         private DevExpress.XtraGrid.Columns.GridColumn colOrderDate;
