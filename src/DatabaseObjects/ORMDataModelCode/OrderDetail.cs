@@ -13,6 +13,7 @@ namespace InventoryXPO
         public OrderDetail() : base(Session.DefaultSession) { }
         public OrderDetail(Session session) : base(session) { }
         public override void AfterConstruction() { base.AfterConstruction(); }
+         
     }
 
 }

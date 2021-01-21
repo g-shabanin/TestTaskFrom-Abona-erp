@@ -24,12 +24,12 @@ namespace InventoryXPO
             get { return fQuantityOnStock; }
             set { SetPropertyValue<long>(nameof(QuantityOnStock), ref fQuantityOnStock, value); }
         }
-        Item fItem;
+        Item fItemId;
         [Association(@"ItemInStockReferencesItem")]
-        public Item Item
+        public Item ItemId
         {
-            get { return fItem; }
-            set { SetPropertyValue<Item>(nameof(Item), ref fItem, value); }
+            get { return fItemId; }
+            set { SetPropertyValue<Item>(nameof(ItemId), ref fItemId, value); }
         }
     }
 

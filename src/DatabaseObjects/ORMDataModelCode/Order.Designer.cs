@@ -18,23 +18,12 @@ namespace InventoryXPO
 
     public partial class Order : XPObject
     {
-        string fProductName;
-        public string ProductName
-        {
-            get { return fProductName; }
-            set { SetPropertyValue<string>(nameof(ProductName), ref fProductName, value); }
-        }
         DateTime fOrderDate;
+        [DevExpress.Xpo.DisplayName(@"Order Date")]
         public DateTime OrderDate
         {
             get { return fOrderDate; }
             set { SetPropertyValue<DateTime>(nameof(OrderDate), ref fOrderDate, value); }
-        }
-        decimal fFreight;
-        public decimal Freight
-        {
-            get { return fFreight; }
-            set { SetPropertyValue<decimal>(nameof(Freight), ref fFreight, value); }
         }
         Customer fCustomer;
         [Association(@"CustomerOrders")]
@@ -54,18 +43,12 @@ namespace InventoryXPO
         string fOrderStatus;
         [Persistent(@"OrderStatusType")]
         [ValueConverter(typeof(InventoryXPO.Tools.OrderStatusTypeValueConverter))]
+        [DevExpress.Xpo.DisplayName(@"Order Status")]
         public string OrderStatus
         {
             get { return fOrderStatus; }
             set { SetPropertyValue<string>(nameof(OrderStatus), ref fOrderStatus, value); }
         }
-        [PersistentAlias("[OrderDetails][].Count()")]
-        public int OrderDetailCount
-        {
-            get { return (int)(EvaluateAlias(nameof(OrderDetailCount))); }
-        }
-        [Association(@"OrderDetailReferencesOrder")]
-        public XPCollection<OrderDetail> OrderDetails { get { return GetCollection<OrderDetail>(nameof(OrderDetails)); } }
     }
 
 }

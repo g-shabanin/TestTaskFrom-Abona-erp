@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="68e58c9c-1140-4864-9475-408e85367453" namespace="InventoryXPO" dataBaseShemaInfo="H4sIAAAAAAAEANWZWXMTORDH36niO7jyjGwdrYtyTEECW6llgSVA7auOVjKFPU55ZpLw7bfHOcgBu9lisBc/WS2pRr9Rd+vfmumz88V8dIqrplrWuztizHeezR4/mr4IDR62y1U4woO6LEc0qm6enjfV7s5x2548nUzOzs7GZ2q8XB1NJOdi8tcfrw/TMS4Cq+qmDXXCnetZ+d9n7dBTR6PphxDn2PSPXLevLDcMV6Y3YYGzva5plwtcTSdfbdfDXta9bdauOpxOLhvXnftV0xs+nuTQ4qyEeUODbhuvx/7WVfkgz4rwXAcvmVcmMcAsmC8OmC4ehZKpgDHTyeXg68l7y3m3qJtbBN81U0fPcNE5e1WtmrZvTyc3rLdG/xPjf+W8yQpOZwORM5UlZ5CAqA1kxgUaCcmAiuIeK02f/ADu67At2sgdRy49U75oBiAtcyknJlJRTuTkvY1D075dZYq6zbPmqFVC3rNKYs3csOg9MvDGFu24tOgezPot62UsPjiG1y9iIwHsYwrZZGClkCuDs5IFGxIzXkQZIHuD9536RwL43WqZu7Qlp0Z0PBeRmQMMDCzRRq8pcVntHSavpbA/xan3aUWbx/UIUhVrGPIADELMzEehmXM5OlmE0QGHxn21wurouN0CLNgCqXimVSRYicgi94VZU5IuQlkb1NCwX8/aTdNKrpUNFhgvxAie/vksC4sA6Ik1Kgs/xZPfdIvN0yatQDtiDCZSWg7ashi0p2aCoiTx4uCOvKY9bEPbbeFEglyCzSUzkhqWgS6RRQyScSchcCgYffiJwB++nGwhXRWfZMJsmVGkrUA6ytOaaxbQgkkeSimDC6w70JJ+vzj4EPrjoMXFRuSHjclnD4oZ5+lAVloxJ2Vg1nGvCV3JmAaVHz3ZdrSHLzaWTOVD1n0Ok5JCOnpK4ErSQRxTzvrhOWyoTT6oqaJNnzey11mEoJG0te8zOXDQLCaqGkO2XEg6oiXIQff6zy7UbdV+eXsFufEtt8k7wQVTSkcSmdFSxUjimqwqysgF5PvEP6q/KpxnsXlW7kxOinY3WFv6E4uz4LxjJiqTYuJCu8FZL9LUL006WLW4j22o5hsJ5IQhl0hVlEFlGCRLQizJzEIEdJgzaU8+aCCvAQ/yFlQ2JtLYRTEeehnGrWKUwzgDI7V0IcQQBpdh67S8BVY6g6QF1WMqzUCYwrxPmuWUdRJacNSD1083PPcqWW/hUiDwaKVxLJpI7lxoux0qZDIKww3nmaeHgw8WzzeF+CYucsHTqQR0QCUSnsA1UIUFJFaE89q7mFLMw8f0tsorUlsFaXdZxiQYncKSBU6CTETljFKqKLh/bT1cpfG8+YDn27gisZIKaUdOrvp0Jok9JiVZys5A9gmCGL6qrLaQy7wpXkrK1qAzFVTWCOYUlc8iF5+jiJD1w+/5Bg7pl3W3WHdsJq4RXX8ZRFvei5WoBZ1g3DGlk7FUdHIww97v/g/cPHBhlAiU0JPNxGypki6k0jAphcmA4XnwTxefwrzbRlHJU5GgaD8z5W6grSVH58BMsAjJW+X4sF8uLttfh0z7T6KY362WaW0cTS7Mny6+n8728fTl+ckKm2a8H9owPpV8LJ6MLrt3+9YYxvzJaK+bt90Kd2vs2lWYPxm96+K8Sr/jlw/Lz1jvRueysBqoWuQI/fXX1SPWz9ubh6bBpt+A9931250+z7Q0LNX55bouTIdduWV6j4vlKd4deGG9O3YvNDj7WKfjUB8h5bZ1++LVfGsNU3ozJ7hqqy2v7TvLmP6GNa7IvfaWiwXWbXPpo/fMtwbvY1Md0d9XFbnCnRm3+9bT3nTzee81L/A4nFbLFTlFCbTdFC93ex4/mk7ufGif/Q2W1a2CkR8AAA==" generateStoredProcedures="false" fieldNameCase="Unchanged" useNameOf="true" connectionStringName="InventoryXPO" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" name="ORMDataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="68e58c9c-1140-4864-9475-408e85367453" namespace="InventoryXPO" dataBaseShemaInfo="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" generateStoredProcedures="false" fieldNameCase="Unchanged" useNameOf="true" connectionStringName="InventoryXPO" createdInVersion="20.1.4.0" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="20.1.4.0" name="ORMDataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
   <classes>
     <dataBaseObjectModelHasClasses Id="5381cb28-b545-4a12-ac3b-532e5398c8f5">
       <xpObject Id="f1905a92-936c-4ed1-9f84-5f9e132cf466" name="Customer" baseClass="XPObject" userFileName="Customer" designerFileName="Customer.Designer" className="Customer" persistent="Customer" virtualName="Customer" trackPropertiesModificationsOnRead="True">
@@ -29,63 +29,42 @@
     <dataBaseObjectModelHasClasses Id="a28a08e7-4b39-42fd-9ebb-eafb340b44f8">
       <xpObject Id="9bcad6d4-ff4d-4872-a7ac-691b2a4d96e1" name="Order" baseClass="XPObject" userFileName="Order" designerFileName="Order.Designer" className="Order" virtualName="Order">
         <fields>
-          <generalXpObjectHasFields Id="69f21a47-22a3-451a-abf7-4434b8d446f1">
-            <field Id="ee80df1d-84ea-4772-b95c-47598ec95217" name="ProductName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="b0be2316-e741-414b-adda-2f795d2245b2">
-            <field Id="9e423f76-e0a4-4abd-9b15-88db82f165ae" name="OrderDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="26d1aa38-cb2e-496e-8efa-312a281a86c5">
-            <field Id="947f4cf9-53b4-42ee-b09f-76fc5f1377a3" name="Freight" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+            <field Id="9e423f76-e0a4-4abd-9b15-88db82f165ae" name="OrderDate" columnType="DateTime" displayName="Order Date" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="768975d7-d77e-4894-8f48-ddf50575869e">
-            <field Id="20537a74-0f9f-4974-9d2f-b44e9377b374" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+            <field Id="20537a74-0f9f-4974-9d2f-b44e9377b374" name="Customer" displayName="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="c5f06697-d6b8-45a8-8e01-404d71b4dd47">
             <field Id="c5345874-a6be-4a57-ba59-a6c4f32377ee" name="OrderNum" displayName="Order Number" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="40" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="37c33116-ab9b-4cca-bb09-05ce179cf5c2">
-            <field Id="f9c2ced7-6342-428d-8505-ae746c94fff1" name="OrderStatus" persistent="OrderStatusType" valueConverter="InventoryXPO.Tools.OrderStatusTypeValueConverter" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="6b251319-a378-45e5-afb2-8669f910ea6c">
-            <persistentAlias Id="7a35e909-298d-4efa-8aa2-5f95e44cdab8" name="OrderDetailCount" columnType="Int32" virtualColumnType="Int32" expression="[OrderDetails][].Count()" />
+            <field Id="f9c2ced7-6342-428d-8505-ae746c94fff1" name="OrderStatus" displayName="Order Status" persistent="OrderStatusType" valueConverter="InventoryXPO.Tools.OrderStatusTypeValueConverter" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
-        <saTargets>
-          <simpleAssociation Id="ad8e2401-de30-4fc7-bc51-490e51fd0333" sourceCollectionName="OrderDetails" name="OrderDetailReferencesOrder" targetFieldName="OrderId">
-            <xpObjectMoniker Id="ceadfb1d-6e36-4c79-ac2d-ab4e8eddb370" />
-          </simpleAssociation>
-        </saTargets>
-        <collectionFields>
-          <xpObjectHasCollectionFields Id="5dddbf9e-abd6-4421-ba6e-d08d56a6b696">
-            <collectionField Id="bf2bbc49-1fb4-458e-a5a1-28c2577b3d53" name="OrderDetails" />
-          </xpObjectHasCollectionFields>
-        </collectionFields>
       </xpObject>
     </dataBaseObjectModelHasClasses>
     <dataBaseObjectModelHasClasses Id="0b22e684-9c56-4d35-bc1f-e67844415f94">
       <xpObject Id="7bc9d943-689a-4353-822a-780956c932bc" name="Item" baseClass="XPObject" userFileName="Item" designerFileName="Item.Designer" className="Item" virtualName="Item">
         <fields>
           <generalXpObjectHasFields Id="b884e528-e733-457a-89d5-454164df9254">
-            <field Id="9f7bfdb0-d5be-422b-bb94-032165bcdd5e" name="ItemName" displayName="Item Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" />
+            <field Id="9f7bfdb0-d5be-422b-bb94-032165bcdd5e" name="ItemName" displayName="Item Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" size="200" xMLDocComments="Product Name" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9406cc4a-b28c-4926-98e6-a114629b9541">
+            <field Id="53c194d8-3dd4-47e9-ba48-2b9dc76f880a" name="ItemPriceInStock" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Item Price in Stock" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ec2348b1-667e-46f5-9cda-e7767c81529e">
+            <field Id="9f8105e3-8ddd-478e-9e6a-85dbd358da26" name="OrderDetail" virtualColumnType="OrderDetail" logicalType="OrderDetail" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
         <saTargets>
-          <simpleAssociation Id="9bc807ba-2c7b-4c86-9e35-03852d8e6c9f" sourceCollectionName="ItemInStocks" name="ItemInStockReferencesItem" targetFieldName="Item">
+          <simpleAssociation Id="9bc807ba-2c7b-4c86-9e35-03852d8e6c9f" sourceCollectionName="ItemInStocks" name="ItemInStockReferencesItem" targetFieldName="ItemId">
             <xpObjectMoniker Id="d1aa5e06-9874-4045-bc6c-ad70125f1242" />
           </simpleAssociation>
         </saTargets>
-        <mMTarget>
-          <manyToManyRelationship Id="f45c859f-9432-48a8-9f7a-50d19985a6a4" sourceCollectionName="OrderDetails" name="OrderDetailReferencesItem" targetCollectionName="Items">
-            <xpObjectMoniker Id="ceadfb1d-6e36-4c79-ac2d-ab4e8eddb370" />
-          </manyToManyRelationship>
-        </mMTarget>
         <collectionFields>
           <xpObjectHasCollectionFields Id="536621f3-d3a9-4db3-bee2-6357f77691aa">
             <collectionField Id="3ff35057-b59f-4c84-a94e-e1ef85ec1fa2" name="ItemInStocks" />
-          </xpObjectHasCollectionFields>
-          <xpObjectHasCollectionFields Id="8df8f3d0-e30a-4f0d-a11f-724fe9995e46">
-            <collectionField Id="e47b3db2-1bbe-48c1-8da9-3d74e3cc44f7" name="OrderDetails" type="XPCollection" />
           </xpObjectHasCollectionFields>
         </collectionFields>
       </xpObject>
@@ -97,7 +76,7 @@
             <field Id="97c98101-335b-47b7-96ac-c983b2b014d2" name="QuantityOnStock" columnType="Int64" virtualColumnType="Int64" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="3267bee1-b334-4b8e-b79f-37bf5d771dc0">
-            <field Id="086dc306-a77f-45f0-a898-6b36cbc01582" name="Item" virtualColumnType="Item" logicalType="Item" delayedUpdateModifiedOnly="false" />
+            <field Id="086dc306-a77f-45f0-a898-6b36cbc01582" name="ItemId" virtualColumnType="Item" logicalType="Item" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
         </fields>
       </xpObject>
@@ -106,18 +85,23 @@
       <xpObject Id="ceadfb1d-6e36-4c79-ac2d-ab4e8eddb370" name="OrderDetail" baseClass="XPObject" userFileName="OrderDetail" designerFileName="OrderDetail.Designer" className="OrderDetail" virtualName="OrderDetail">
         <fields>
           <generalXpObjectHasFields Id="51e22e4d-ef47-40a4-bf1f-8c8c9cd7ce39">
-            <field Id="2eca74f3-0a07-4073-aa50-462528aabaaa" name="OrderId" displayName="Order Id" virtualColumnType="Order" logicalType="Order" delayedUpdateModifiedOnly="false" />
-          </generalXpObjectHasFields>
-          <generalXpObjectHasFields Id="2a4c6b3b-ff96-4b08-a6fb-cc0fdca267df">
-            <field Id="65b27437-4035-416f-99c5-dcd5c1510e53" name="ItemId" virtualColumnType="Item" logicalType="Item" delayedUpdateModifiedOnly="false" />
+            <field Id="2eca74f3-0a07-4073-aa50-462528aabaaa" name="Order" displayName="Order Id" virtualColumnType="Order" logicalType="Order" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
           <generalXpObjectHasFields Id="6411fc29-25d8-405c-9b46-a091f0afec7e">
             <field Id="ea0b7268-b6b6-4ff3-8e3e-2b160600d0c3" name="OrderDetailQuantity" columnType="Int16" displayName="Order Quantity" virtualColumnType="Int16" delayedUpdateModifiedOnly="false" />
           </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="721530d4-b552-4c3b-a627-3d22810bdaaa">
+            <field Id="3cc9a8be-10a1-47dc-b289-a7499443a61b" name="OrderDetailPrice" columnType="Decimal" displayName="OrderDetailPrice" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" xMLDocComments="Item Price in Order" />
+          </generalXpObjectHasFields>
         </fields>
+        <saTargets>
+          <simpleAssociation Id="52dafc8e-a090-4be0-ac94-673cc976006e" sourceCollectionName="Items" name="ItemReferencesOrderDetail" targetFieldName="OrderDetail">
+            <xpObjectMoniker Id="7bc9d943-689a-4353-822a-780956c932bc" />
+          </simpleAssociation>
+        </saTargets>
         <collectionFields>
-          <xpObjectHasCollectionFields Id="c8475689-b313-4480-b299-02175134e30c">
-            <collectionField Id="c50ffd3e-cf45-48ce-9d96-56920d092a5c" name="Items" type="XPCollection" />
+          <xpObjectHasCollectionFields Id="52e5852b-f7c5-48cb-a4bf-b4bccdfce244">
+            <collectionField Id="f4f61a5c-b301-44c1-93bc-9ba3040562a7" name="Items" />
           </xpObjectHasCollectionFields>
         </collectionFields>
       </xpObject>

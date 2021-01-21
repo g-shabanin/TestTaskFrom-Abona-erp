@@ -19,6 +19,9 @@ namespace InventoryXPO
     public partial class Item : XPObject
     {
         string fItemName;
+        /// <summary>
+        /// Product Name
+        /// </summary>
         [Size(200)]
         [DevExpress.Xpo.DisplayName(@"Item Name")]
         public string ItemName
@@ -26,8 +29,22 @@ namespace InventoryXPO
             get { return fItemName; }
             set { SetPropertyValue<string>(nameof(ItemName), ref fItemName, value); }
         }
-        [Association(@"OrderDetailReferencesItem")]
-        public XPCollection<OrderDetail> OrderDetails { get { return GetCollection<OrderDetail>(nameof(OrderDetails)); } }
+        decimal fItemPriceInStock;
+        /// <summary>
+        /// Item Price in Stock
+        /// </summary>
+        public decimal ItemPriceInStock
+        {
+            get { return fItemPriceInStock; }
+            set { SetPropertyValue<decimal>(nameof(ItemPriceInStock), ref fItemPriceInStock, value); }
+        }
+        OrderDetail fOrderDetail;
+        [Association(@"ItemReferencesOrderDetail")]
+        public OrderDetail OrderDetail
+        {
+            get { return fOrderDetail; }
+            set { SetPropertyValue<OrderDetail>(nameof(OrderDetail), ref fOrderDetail, value); }
+        }
         [Association(@"ItemInStockReferencesItem")]
         public XPCollection<ItemInStock> ItemInStocks { get { return GetCollection<ItemInStock>(nameof(ItemInStocks)); } }
     }

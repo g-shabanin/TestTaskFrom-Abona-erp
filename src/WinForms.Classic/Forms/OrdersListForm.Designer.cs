@@ -24,21 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrdersListForm));
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.OrdersGridControl = new DevExpress.XtraGrid.GridControl();
-            this.OrdersInstantFeedbackView = new DevExpress.Xpo.XPInstantFeedbackView(this.components);
-            this.OrdersGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colOid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colProductName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOrderDate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFreight = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colOrderStatus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.OrdeId = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnNew = new DevExpress.XtraBars.BarButtonItem();
             this.btnDelete = new DevExpress.XtraBars.BarButtonItem();
@@ -46,149 +32,33 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.gridSplitContainer1 = new DevExpress.XtraGrid.GridSplitContainer();
-            this.OrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            this.OrderDetailsPanel = new DevExpress.XtraEditors.PanelControl();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.OrdersGrid = new DevExpress.XtraGrid.GridControl();
+            this.OrdersDetailsCollection = new DevExpress.Xpo.XPCollection(this.components);
+            this.OrdersGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colOid = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OrderDetailsGrid = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colOrderDetailPrice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOrderDetailQuantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOid1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).BeginInit();
-            this.gridSplitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsPanel)).BeginInit();
+            this.OrderDetailsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersDetailsCollection)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn2});
-            this.gridView2.GridControl = this.OrdersGridControl;
-            this.gridView2.Name = "gridView2";
-            // 
-            // gridColumn2
-            // 
-            this.gridColumn2.Caption = "Order ID";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 94;
-            // 
-            // OrdersGridControl
-            // 
-            this.OrdersGridControl.DataSource = this.OrdersInstantFeedbackView;
-            this.OrdersGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OrdersGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.LevelTemplate = this.gridView2;
-            gridLevelNode1.RelationName = "OrderDetail";
-            this.OrdersGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.OrdersGridControl.Location = new System.Drawing.Point(0, 0);
-            this.OrdersGridControl.MainView = this.OrdersGridView;
-            this.OrdersGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OrdersGridControl.Name = "OrdersGridControl";
-            this.OrdersGridControl.Size = new System.Drawing.Size(933, 333);
-            this.OrdersGridControl.TabIndex = 0;
-            this.OrdersGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.OrdersGridView,
-            this.gridView1,
-            this.gridView2});
-            // 
-            // OrdersInstantFeedbackView
-            // 
-            this.OrdersInstantFeedbackView.ObjectType = typeof(InventoryXPO.Order);
-            this.OrdersInstantFeedbackView.Properties.AddRange(new DevExpress.Xpo.ServerViewProperty[] {
-            new DevExpress.Xpo.ServerViewProperty("Oid", DevExpress.Xpo.SortDirection.None, "[Oid]"),
-            new DevExpress.Xpo.ServerViewProperty("Product Name", DevExpress.Xpo.SortDirection.None, "[ProductName]"),
-            new DevExpress.Xpo.ServerViewProperty("Order Date", DevExpress.Xpo.SortDirection.None, "[OrderDate]"),
-            new DevExpress.Xpo.ServerViewProperty("Freight", DevExpress.Xpo.SortDirection.None, "[Freight]"),
-            new DevExpress.Xpo.ServerViewProperty("Order Status", DevExpress.Xpo.SortDirection.None, "[OrderStatus]")});
-            this.OrdersInstantFeedbackView.ResolveSession += new System.EventHandler<DevExpress.Xpo.ResolveSessionEventArgs>(this.OrdersInstantFeedbackView_ResolveSession);
-            this.OrdersInstantFeedbackView.DismissSession += new System.EventHandler<DevExpress.Xpo.ResolveSessionEventArgs>(this.OrdersInstantFeedbackView_DismissSession);
-            // 
-            // OrdersGridView
-            // 
-            this.OrdersGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colOid,
-            this.colProductName,
-            this.colOrderDate,
-            this.colFreight,
-            this.colOrderStatus,
-            this.OrdeId});
-            this.OrdersGridView.DetailHeight = 431;
-            this.OrdersGridView.GridControl = this.OrdersGridControl;
-            this.OrdersGridView.Name = "OrdersGridView";
-            this.OrdersGridView.OptionsBehavior.Editable = false;
-            this.OrdersGridView.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.OrdersGridView_RowClick);
-            // 
-            // colOid
-            // 
-            this.colOid.FieldName = "Oid";
-            this.colOid.MinWidth = 23;
-            this.colOid.Name = "colOid";
-            this.colOid.Width = 87;
-            // 
-            // colProductName
-            // 
-            this.colProductName.FieldName = "Product Name";
-            this.colProductName.MinWidth = 23;
-            this.colProductName.Name = "colProductName";
-            this.colProductName.Visible = true;
-            this.colProductName.VisibleIndex = 1;
-            this.colProductName.Width = 249;
-            // 
-            // colOrderDate
-            // 
-            this.colOrderDate.FieldName = "Order Date";
-            this.colOrderDate.MinWidth = 23;
-            this.colOrderDate.Name = "colOrderDate";
-            this.colOrderDate.Visible = true;
-            this.colOrderDate.VisibleIndex = 2;
-            this.colOrderDate.Width = 105;
-            // 
-            // colFreight
-            // 
-            this.colFreight.FieldName = "Freight";
-            this.colFreight.MinWidth = 23;
-            this.colFreight.Name = "colFreight";
-            this.colFreight.Visible = true;
-            this.colFreight.VisibleIndex = 3;
-            this.colFreight.Width = 70;
-            // 
-            // colOrderStatus
-            // 
-            this.colOrderStatus.FieldName = "Order Status";
-            this.colOrderStatus.MinWidth = 25;
-            this.colOrderStatus.Name = "colOrderStatus";
-            this.colOrderStatus.Visible = true;
-            this.colOrderStatus.VisibleIndex = 4;
-            this.colOrderStatus.Width = 411;
-            // 
-            // OrdeId
-            // 
-            this.OrdeId.Caption = "Order Id";
-            this.OrdeId.FieldName = "Oid";
-            this.OrdeId.MinWidth = 25;
-            this.OrdeId.Name = "OrdeId";
-            this.OrdeId.Visible = true;
-            this.OrdeId.VisibleIndex = 0;
-            this.OrdeId.Width = 68;
-            // 
-            // gridView1
-            // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1});
-            this.gridView1.GridControl = this.OrdersGridControl;
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "Order Id";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
             // 
             // ribbonControl1
             // 
@@ -199,12 +69,11 @@
             this.btnNew,
             this.btnDelete});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 3;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(933, 193);
+            this.ribbonControl1.Size = new System.Drawing.Size(1092, 158);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             // 
             // btnNew
@@ -240,11 +109,10 @@
             // 
             // ribbonStatusBar1
             // 
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 526);
-            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 692);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(933, 28);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(1092, 22);
             this.ribbonStatusBar1.Visible = false;
             // 
             // ribbonPage2
@@ -252,45 +120,178 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // gridSplitContainer1
+            // OrderDetailsPanel
             // 
-            this.gridSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridSplitContainer1.Grid = this.OrdersGridControl;
-            this.gridSplitContainer1.Location = new System.Drawing.Point(0, 193);
-            this.gridSplitContainer1.Name = "gridSplitContainer1";
-            this.gridSplitContainer1.Panel1.Controls.Add(this.OrdersGridControl);
-            this.gridSplitContainer1.Size = new System.Drawing.Size(933, 333);
-            this.gridSplitContainer1.TabIndex = 3;
+            this.OrderDetailsPanel.AutoSize = true;
+            this.OrderDetailsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.OrderDetailsPanel.Controls.Add(this.splitContainer1);
+            this.OrderDetailsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderDetailsPanel.Location = new System.Drawing.Point(0, 158);
+            this.OrderDetailsPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OrderDetailsPanel.Name = "OrderDetailsPanel";
+            this.OrderDetailsPanel.Size = new System.Drawing.Size(1092, 534);
+            this.OrderDetailsPanel.TabIndex = 7;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(2, 2);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.OrdersGrid);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.OrderDetailsGrid);
+            this.splitContainer1.Size = new System.Drawing.Size(1088, 530);
+            this.splitContainer1.SplitterDistance = 326;
+            this.splitContainer1.SplitterWidth = 3;
+            this.splitContainer1.TabIndex = 7;
+            // 
+            // OrdersGrid
+            // 
+            this.OrdersGrid.DataSource = this.OrdersDetailsCollection;
+            this.OrdersGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrdersGrid.Location = new System.Drawing.Point(0, 0);
+            this.OrdersGrid.MainView = this.OrdersGridView;
+            this.OrdersGrid.Name = "OrdersGrid";
+            this.OrdersGrid.Size = new System.Drawing.Size(1088, 326);
+            this.OrdersGrid.TabIndex = 2;
+            this.OrdersGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.OrdersGridView});
+            // 
+            // OrdersDetailsCollection
+            // 
+            this.OrdersDetailsCollection.DisplayableProperties = resources.GetString("OrdersDetailsCollection.DisplayableProperties");
+            this.OrdersDetailsCollection.ObjectType = typeof(InventoryXPO.Item);
+            this.OrdersDetailsCollection.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.OrdersDetailsCollection_ListChanged);
+            // 
+            // OrdersGridView
+            // 
+            this.OrdersGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colOid,
+            this.gridColumn2,
+            this.gridColumn3,
+            this.gridColumn4});
+            this.OrdersGridView.GridControl = this.OrdersGrid;
+            this.OrdersGridView.Name = "OrdersGridView";
+            this.OrdersGridView.OptionsBehavior.Editable = false;
+            // 
+            // colOid
+            // 
+            this.colOid.Caption = "Order ID";
+            this.colOid.FieldName = "Oid";
+            this.colOid.Name = "colOid";
+            this.colOid.Visible = true;
+            this.colOid.VisibleIndex = 0;
+            this.colOid.Width = 120;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.FieldName = "OrderDetail.Order.OrderNum";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 313;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.FieldName = "OrderDetail.Order.OrderDate";
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 313;
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.FieldName = "OrderDetail.Order.OrderStatus";
+            this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Visible = true;
+            this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 317;
+            // 
+            // OrderDetailsGrid
+            // 
+            this.OrderDetailsGrid.DataMember = "OrderDetail";
+            this.OrderDetailsGrid.DataSource = this.OrdersDetailsCollection;
+            this.OrderDetailsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderDetailsGrid.Location = new System.Drawing.Point(0, 0);
+            this.OrderDetailsGrid.MainView = this.gridView1;
+            this.OrderDetailsGrid.MenuManager = this.ribbonControl1;
+            this.OrderDetailsGrid.Name = "OrderDetailsGrid";
+            this.OrderDetailsGrid.Size = new System.Drawing.Size(1088, 201);
+            this.OrderDetailsGrid.TabIndex = 0;
+            this.OrderDetailsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colOid1,
+            this.colOrderDetailPrice,
+            this.colOrderDetailQuantity});
+            this.gridView1.GridControl = this.OrderDetailsGrid;
+            this.gridView1.Name = "gridView1";
+            // 
+            // colOrderDetailPrice
+            // 
+            this.colOrderDetailPrice.FieldName = "OrderDetailPrice";
+            this.colOrderDetailPrice.Name = "colOrderDetailPrice";
+            this.colOrderDetailPrice.Visible = true;
+            this.colOrderDetailPrice.VisibleIndex = 1;
+            this.colOrderDetailPrice.Width = 368;
+            // 
+            // colOrderDetailQuantity
+            // 
+            this.colOrderDetailQuantity.FieldName = "OrderDetailQuantity";
+            this.colOrderDetailQuantity.Name = "colOrderDetailQuantity";
+            this.colOrderDetailQuantity.Visible = true;
+            this.colOrderDetailQuantity.VisibleIndex = 2;
+            this.colOrderDetailQuantity.Width = 370;
+            // 
+            // colOid1
+            // 
+            this.colOid1.Caption = "Order ID";
+            this.colOid1.FieldName = "Oid";
+            this.colOid1.Name = "colOid1";
+            this.colOid1.Visible = true;
+            this.colOid1.VisibleIndex = 0;
+            this.colOid1.Width = 325;
             // 
             // OrdersListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 554);
-            this.Controls.Add(this.gridSplitContainer1);
+            this.ClientSize = new System.Drawing.Size(1092, 714);
+            this.Controls.Add(this.OrderDetailsPanel);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "OrdersListForm";
             this.Ribbon = this.ribbonControl1;
             this.StatusBar = this.ribbonStatusBar1;
             this.Text = "Orders";
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OrdersGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridSplitContainer1)).EndInit();
-            this.gridSplitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.OrderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsPanel)).EndInit();
+            this.OrderDetailsPanel.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersDetailsCollection)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrdersGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDetailsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private DevExpress.XtraGrid.GridControl OrdersGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView OrdersGridView;
         private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
@@ -298,19 +299,20 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.BarButtonItem btnNew;
         private DevExpress.XtraBars.BarButtonItem btnDelete;
-        private DevExpress.Xpo.XPInstantFeedbackView OrdersInstantFeedbackView;
-        private DevExpress.XtraGrid.Columns.GridColumn colOid;
-        private DevExpress.XtraGrid.Columns.GridColumn colProductName;
-        private DevExpress.XtraGrid.Columns.GridColumn colOrderDate;
-        private DevExpress.XtraGrid.Columns.GridColumn colFreight;
-        private DevExpress.XtraGrid.Columns.GridColumn colOrderStatus;
+        private DevExpress.XtraEditors.PanelControl OrderDetailsPanel;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private DevExpress.XtraGrid.GridControl OrdersGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView OrdersGridView;
+        private DevExpress.Xpo.XPCollection OrdersDetailsCollection;
+        private DevExpress.XtraGrid.GridControl OrderDetailsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.GridSplitContainer gridSplitContainer1;
-        private System.Windows.Forms.BindingSource OrderBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn OrdeId;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDetailPrice;
+        private DevExpress.XtraGrid.Columns.GridColumn colOrderDetailQuantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colOid;
+        private DevExpress.XtraGrid.Columns.GridColumn colOid1;
     }
 }
 

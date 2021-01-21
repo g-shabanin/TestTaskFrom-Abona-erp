@@ -51,7 +51,7 @@ namespace WinForms.Classic {
 
         private void Reload() {
             Session = new Session();
-            CustomersBindingSource.DataSource = new XPCollection<Customer>(Session);
+            GridLinkCollection.Reload();
         }
 
         private void BtnNew_ItemClick(object sender, ItemClickEventArgs e) {

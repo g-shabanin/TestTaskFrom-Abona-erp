@@ -12,6 +12,7 @@ namespace WinForms.Classic {
         public OrdersListForm() {
             InitializeComponent();
         }
+        protected Session Session { get; private set; }
         private void OrdersGridView_RowClick(object sender, RowClickEventArgs e) {
             if(e.Clicks == 2) {
                 e.Handled = true;
@@ -46,7 +47,8 @@ namespace WinForms.Classic {
         }
         
         private void Reload() {
-            OrdersInstantFeedbackView.Refresh();
+            Session = new Session();
+            OrdersDetailsCollection.Reload();
         }
 
         private void BtnNew_ItemClick(object sender, ItemClickEventArgs e) {
@@ -62,12 +64,9 @@ namespace WinForms.Classic {
             Reload();
         }
 
-        private void OrdersInstantFeedbackView_ResolveSession(object sender, ResolveSessionEventArgs e) {
-            e.Session = new Session();
-        }
+        private void OrdersDetailsCollection_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
+        {
 
-        private void OrdersInstantFeedbackView_DismissSession(object sender, ResolveSessionEventArgs e) {
-            e.Session.Session.Dispose();
         }
     }
 }

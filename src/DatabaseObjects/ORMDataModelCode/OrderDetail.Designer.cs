@@ -18,19 +18,12 @@ namespace InventoryXPO
 
     public partial class OrderDetail : XPObject
     {
-        Order fOrderId;
-        [Association(@"OrderDetailReferencesOrder")]
+        Order fOrder;
         [DevExpress.Xpo.DisplayName(@"Order Id")]
-        public Order OrderId
+        public Order Order
         {
-            get { return fOrderId; }
-            set { SetPropertyValue<Order>(nameof(OrderId), ref fOrderId, value); }
-        }
-        Item fItemId;
-        public Item ItemId
-        {
-            get { return fItemId; }
-            set { SetPropertyValue<Item>(nameof(ItemId), ref fItemId, value); }
+            get { return fOrder; }
+            set { SetPropertyValue<Order>(nameof(Order), ref fOrder, value); }
         }
         short fOrderDetailQuantity;
         [DevExpress.Xpo.DisplayName(@"Order Quantity")]
@@ -39,7 +32,16 @@ namespace InventoryXPO
             get { return fOrderDetailQuantity; }
             set { SetPropertyValue<short>(nameof(OrderDetailQuantity), ref fOrderDetailQuantity, value); }
         }
-        [Association(@"OrderDetailReferencesItem")]
+        decimal fOrderDetailPrice;
+        /// <summary>
+        /// Item Price in Order
+        /// </summary>
+        public decimal OrderDetailPrice
+        {
+            get { return fOrderDetailPrice; }
+            set { SetPropertyValue<decimal>(nameof(OrderDetailPrice), ref fOrderDetailPrice, value); }
+        }
+        [Association(@"ItemReferencesOrderDetail")]
         public XPCollection<Item> Items { get { return GetCollection<Item>(nameof(Items)); } }
     }
 

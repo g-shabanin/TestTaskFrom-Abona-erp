@@ -65,5 +65,20 @@ namespace WinForms.Classic {
         private void ordersBarButtonItem_ItemClick(object sender, ItemClickEventArgs e) {
             ActivateDocument("Orders", nameof(OrdersListForm));
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accordionControlElement1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void orderDetailaccordionControl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
